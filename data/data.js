@@ -1,28 +1,28 @@
 var medalleroHistorico = [
     {
         "posicion": 1,"nombre": "asiermaster",
-        "oro": 102,"plata": 56, "bronce": 39,"npod": 111
+        "oro": 102,"plata": 56, "bronce": 39,"npod": 114
     },{
         "posicion": 2, "nombre": "gurrutxaga",
-        "oro": 57, "plata": 50, "bronce": 32, "npod": 157
+        "oro": 59, "plata": 50, "bronce": 32, "npod": 158
     },{
         "posicion": 3, "nombre": "OIER19",
-        "oro": 26, "plata": 44,  "bronce": 50, "npod": 191
+        "oro": 26, "plata": 44,  "bronce": 53, "npod": 191
     },{
         "posicion": 4, "nombre": "Jonel",
-        "oro": 22, "plata": 23, "bronce": 21, "npod": 220
+        "oro": 22, "plata": 23, "bronce": 21, "npod": 223
     },{
-        "posicion": 5, "nombre": "galdi",
-        "oro": 21, "plata": 30, "bronce": 37, "npod": 175
+        "posicion": 6, "nombre": "galdi",
+        "oro": 21, "plata": 30, "bronce": 37, "npod": 177
     },{
-        "posicion": 6, "nombre": "berasa",
-        "oro": 21, "plata": 22, "bronce": 37, "npod": 187
+        "posicion": 5, "nombre": "berasa",
+        "oro": 22, "plata": 22, "bronce": 37, "npod": 188
     },{
         "posicion": 7, "nombre": "runspeltinskin",
-        "oro": 17, "plata": 18, "bronce": 37, "npod": 232
+        "oro": 17, "plata": 19, "bronce": 37, "npod": 234
     },{
         "posicion": 8, "nombre": "manaria",
-        "oro": 16, "plata": 23, "bronce": 25, "npod": 196
+        "oro": 16, "plata": 24, "bronce": 25, "npod": 198
     },{
         "posicion": 9, "nombre": "JonBaraja",
         "oro": 16, "plata": 14, "bronce": 14, "npod": 57
