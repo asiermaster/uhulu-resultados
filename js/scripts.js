@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', event => {
     // Side bar events
     addToggleSideBar();
     addEventMedalleroHistorico();
-    addEventMedallero2024();
+    addEventMedalleroYear();
     //Go to default
     goToDefaultMedallero();
 
@@ -53,17 +53,17 @@ function addEventMedalleroHistorico(){
     }
 }
 
-function addEventMedallero2024(){
-    const sidebarMeallero2024 = document.body.querySelector('#medallero_2024');
-    if (sidebarMeallero2024) {
-        sidebarMeallero2024.addEventListener('click', event => {
+function addEventMedalleroYear(){
+    document.body.querySelectorAll("[id^='medallero_20']").forEach(function (sidebarMealleroYear) {
+        sidebarMealleroYear.addEventListener('click', event => {
             event.preventDefault();
+            var idEvent = event.currentTarget.getAttribute('id');
             $(function () {
-                loadMedallero2024();
+                loadMedalleroYear(idEvent.substr(idEvent.length - 4));
               })
             
         });
-    }
+    });
 }
 
 function loadMedalleroHistorico(){
@@ -73,11 +73,11 @@ function loadMedalleroHistorico(){
     $("#tableTitle").html("Medallero histórico");
 }
 
-function loadMedallero2024(){
+function loadMedalleroYear(year){
     var $table = $('#tableHisEdi');
-    $table.bootstrapTable('load', medallero2024);
+    $table.bootstrapTable('load', window["medallero" + year]);
     $table.bootstrapTable('sortBy', {field: 'posicion', sortOrder: 'asc'});
-    $("#tableTitle").html("Medallero 2024");
+    $("#tableTitle").html("Medallero " + year);
 }
 
 function goToDefaultMedallero(){

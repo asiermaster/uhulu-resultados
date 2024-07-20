@@ -82,3 +82,33 @@ var medallero2024 = [
         "oro": 0, "plata": 0, "bronce": 0, "npod": 3
     }
 ];
+var medallero2023 = [
+    {
+        "posicion": 1, "nombre": "asiermaster",
+        "oro": 17, "plata": 7, "bronce": 2, "npod": 5
+    },{
+        "posicion": 2, "nombre": "gurrutxaga",
+        "oro": 8, "plata": 6, "bronce": 1, "npod": 15
+    },{
+        "posicion": 3, "nombre": "OIER19",
+        "oro": 2, "plata": 6,  "bronce": 2, "npod": 21
+    },{
+        "posicion": 4, "nombre": "galdi",
+        "oro": 1, "plata": 4, "bronce": 7, "npod": 18
+    },    {
+        "posicion": 5, "nombre": "Jonel",
+        "oro": 1, "plata": 4, "bronce": 3, "npod": 21
+    },{
+        "posicion": 6, "nombre": "manaria",
+        "oro": 1, "plata": 2, "bronce": 3, "npod": 19
+    },{
+        "posicion": 7, "nombre": "zabalaundi",
+        "oro": 1, "plata": 1, "bronce": 2, "npod": 11
+    },{
+        "posicion": 8, "nombre": "runspeltinskin",
+        "oro": 0, "plata": 1, "bronce": 7, "npod": 22
+    },{
+        "posicion": 9, "nombre": "berasa",
+        "oro": 0, "plata": 0, "bronce": 4, "npod": 21
+    }
+];
