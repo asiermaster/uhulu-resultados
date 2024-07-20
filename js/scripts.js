@@ -16,12 +16,29 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
     // Side bar events
+    addToggleSideBar();
     addEventMedalleroHistorico();
     addEventMedallero2024();
     //Go to default
     goToDefaultMedallero();
 
 });
+
+function addToggleSideBar(){
+    // Toggle the side navigation
+    const sidebarToggle = document.body.querySelector('#sidebarToggle');
+    if (sidebarToggle) {
+        // Uncomment Below to persist sidebar toggle between refreshes
+        // if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
+        //     document.body.classList.toggle('sb-sidenav-toggled');
+        // }
+        sidebarToggle.addEventListener('click', event => {
+            event.preventDefault();
+            document.body.classList.toggle('sb-sidenav-toggled');
+            localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));
+        });
+    }
+}
 
 function addEventMedalleroHistorico(){
     const sidebarMealleroHist = document.body.querySelector('#medallero_historico');
@@ -53,12 +70,14 @@ function loadMedalleroHistorico(){
     var $table = $('#tableHisEdi');
     $table.bootstrapTable('load', medalleroHistorico);
     $table.bootstrapTable('sortBy', {field: 'posicion', sortOrder: 'asc'});
+    $("#tableTitle").html("Medallero histórico");
 }
 
 function loadMedallero2024(){
     var $table = $('#tableHisEdi');
     $table.bootstrapTable('load', medallero2024);
     $table.bootstrapTable('sortBy', {field: 'posicion', sortOrder: 'asc'});
+    $("#tableTitle").html("Medallero 2024");
 }
 
 function goToDefaultMedallero(){
