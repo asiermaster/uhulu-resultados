@@ -182,7 +182,7 @@ var medallero2009 = [
         "posicion": 9, "nombre": "castlefont",
         "oro": 0, "plata": 1, "bronce": 0, "npod": 0
     },{
-        "posicion": 10, "nombre": "ELORRI",
+        "posicion": 10, "nombre": "Jonel",
         "oro": 0, "plata": 0, "bronce": 2, "npod": 3
     },{
         "posicion": 11, "nombre": "runspeltinskin",
