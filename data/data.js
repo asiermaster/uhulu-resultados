@@ -153,8 +153,72 @@ var medallero2022 = [
 
 
 
-
-
+var medallero2009 = [
+    {
+        "posicion": 1, "nombre": "berasa",
+        "oro": 2, "plata": 0, "bronce": 0, "npod": 4
+    },{
+        "posicion": 2, "nombre": "galdi",
+        "oro": 1, "plata": 1, "bronce": 0, "npod": 4
+    },{
+        "posicion": 3, "nombre": "asiermaster",
+        "oro": 1, "plata": 0, "bronce": 1, "npod": 4
+    },{
+        "posicion": 4, "nombre": "JonBaraja",
+        "oro": 1, "plata": 0, "bronce": 1, "npod": 1
+    },{
+        "posicion": 5, "nombre": "gorkaolaso",
+        "oro": 1, "plata": 0, "bronce": 0, "npod": 1
+    },{
+        "posicion": 6, "nombre": "OIER19",
+        "oro": 0, "plata": 2,  "bronce": 0, "npod": 4
+    },    {
+        "posicion": 7, "nombre": "manaria",
+        "oro": 0, "plata": 1, "bronce": 1, "npod": 4
+    },{
+        "posicion": 8, "nombre": "baxxter",
+        "oro": 0, "plata": 1, "bronce": 0, "npod": 5
+    },{
+        "posicion": 9, "nombre": "castlefont",
+        "oro": 0, "plata": 1, "bronce": 0, "npod": 0
+    },{
+        "posicion": 10, "nombre": "ELORRI",
+        "oro": 0, "plata": 0, "bronce": 2, "npod": 3
+    },{
+        "posicion": 11, "nombre": "runspeltinskin",
+        "oro": 0, "plata": 0, "bronce": 1, "npod": 5
+    },{
+        "posicion": 12, "nombre": "zabalaundi",
+        "oro": 0, "plata": 0, "bronce": 0, "npod": 2
+    },{
+        "posicion": 13, "nombre": "gurrutxaga",
+        "oro": 0, "plata": 0, "bronce": 0, "npod": 2
+    }
+];
+var medallero2008 = [
+    {
+        "posicion": 1, "nombre": "OIER19",
+        "oro": 2, "plata": 0, "bronce": 1, "npod": 1
+    },{
+        "posicion": 2, "nombre": "asiermaster",
+        "oro": 1, "plata": 3, "bronce": 1, "npod": 0
+    },{
+        "posicion": 3, "nombre": "baxxter",
+        "oro": 1, "plata": 0, "bronce": 0, "npod": 1
+    },{
+        "posicion": 4, "nombre": "manaria",
+        "oro": 1, "plata": 0, "bronce": 0, "npod": 1
+    },{
+        "posicion": 5, "nombre": "berasa",
+        "oro": 0, "plata": 2, "bronce": 1, "npod": 2
+    },{
+        "posicion": 6, "nombre": "galdi",
+        "oro": 0, "plata": 0, "bronce": 1, "npod": 0
+    },{
+        "posicion": 7, "nombre": "runspeltinskin",
+        "oro": 0, "plata": 0, "bronce": 0, "npod": 2
+    }
+];
 var medallero2007 = [
     {
         "posicion": 1, "nombre": "berasa",
