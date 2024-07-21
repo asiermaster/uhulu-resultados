@@ -152,7 +152,48 @@ var medallero2022 = [
 
 
 
-
+var medallero2010 = [
+    {
+        "posicion": 1, "nombre": "asiermaster",
+        "oro": 3, "plata": 0, "bronce": 1, "npod": 5
+    },{
+        "posicion": 2, "nombre": "gorkaolaso",
+        "oro": 2, "plata": 2, "bronce": 0, "npod": 5
+    },{
+        "posicion": 3, "nombre": "berasa",
+        "oro": 1, "plata": 2, "bronce": 0, "npod": 6
+    },{
+        "posicion": 4, "nombre": "JonBaraja",
+        "oro": 1, "plata": 2, "bronce": 0, "npod": 3
+    },{
+        "posicion": 5, "nombre": "galdi",
+        "oro": 1, "plata": 1, "bronce": 0, "npod": 7
+    },{
+        "posicion": 6, "nombre": "OIER19",
+        "oro": 1, "plata": 0,  "bronce": 3, "npod": 5
+    },    {
+        "posicion": 7, "nombre": "zabalaundi",
+        "oro": 0, "plata": 2, "bronce": 1, "npod": 4
+    },{
+        "posicion": 8, "nombre": "runspeltinskin",
+        "oro": 0, "plata": 0, "bronce": 1, "npod": 8
+    },{
+        "posicion": 9, "nombre": "gurrutxaga",
+        "oro": 0, "plata": 0, "bronce": 1, "npod": 8
+    },{
+        "posicion": 10, "nombre": "manaria",
+        "oro": 0, "plata": 0, "bronce": 1, "npod": 7
+    },{
+        "posicion": 11, "nombre": "Jonel",
+        "oro": 0, "plata": 0, "bronce": 1, "npod": 7
+    },{
+        "posicion": 12, "nombre": "baxxter",
+        "oro": 0, "plata": 0, "bronce": 0, "npod": 7
+    },{
+        "posicion": 13, "nombre": "aberasa",
+        "oro": 0, "plata": 0, "bronce": 0, "npod": 3
+    }
+];
 var medallero2009 = [
     {
         "posicion": 1, "nombre": "berasa",
