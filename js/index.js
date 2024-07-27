@@ -14,7 +14,6 @@ window.addEventListener('DOMContentLoaded', event => {
     $(function () {
       $table.bootstrapTable({});
     });
-
     // Side bar events
     addToggleSideBar();
     addEventMedalleroHistorico();
@@ -23,6 +22,7 @@ window.addEventListener('DOMContentLoaded', event => {
     goToDefaultMedallero();
 
 });
+
 
 function addToggleSideBar(){
     // Toggle the side navigation
