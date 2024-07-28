@@ -1,3 +1,4 @@
+/** Data medallero */
 var medalleroHistorico = [
     {
         "posicion": 1,"nombre": "asiermaster",
@@ -49,57 +50,6 @@ var medalleroHistorico = [
         "oro": 0, "plata": 0, "bronce": 0, "npod": 4
     }
 ];
-var puntos_totales = [
-	{
-		"posicion" : 1,		"participante_username" : "asiermaster",		"puntos_totales" : 653713
-	},
-	{
-		"posicion" : 2,		"participante_username" : "OIER19",		"puntos_totales" : 600910
-	},
-	{
-		"posicion" : 3,		"participante_username" : "gurrutxaga",		"puntos_totales" : 581350
-	},
-	{
-		"posicion" : 4,		"participante_username" : "berasa",		"puntos_totales" : 534220
-	},
-	{
-		"posicion" : 5,		"participante_username" : "runspeltinskin",		"puntos_totales" : 510715
-	},
-	{
-		"posicion" : 6,		"participante_username" : "manaria",		"puntos_totales" : 500192
-	},
-	{
-		"posicion" : 7,		"participante_username" : "Jonel",		"puntos_totales" : 496036
-	},
-	{
-		"posicion" : 8,		"participante_username" : "galdi",		"puntos_totales" : 494373
-	},
-	{
-		"posicion" : 9,		"participante_username" : "JonBaraja",		"puntos_totales" : 265976
-	},
-	{
-		"posicion" : 10,		"participante_username" : "gorkaolaso",		"puntos_totales" : 253301
-	},
-	{
-		"posicion" : 11,		"participante_username" : "zabalaundi",		"puntos_totales" : 164531
-	},
-	{
-		"posicion" : 12,		"participante_username" : "baxxter",		"puntos_totales" : 94449
-	},
-	{
-		"posicion" : 13,		"participante_username" : "aberasa",		"puntos_totales" : 38960
-	},
-	{
-		"posicion" : 14,		"participante_username" : "ELORRI",		"puntos_totales" : 37267
-	},
-	{
-		"posicion" : 15,		"participante_username" : "korroskada",		"puntos_totales" : 13130
-	},
-	{
-		"posicion" : 16,		"participante_username" : "castlefont",		"puntos_totales" : 695
-	}
-];
-
 
 var medallero2024=[{"posicion":1,"username":"gurrutxaga","oro":7,"plata":2,"bronce":2,"nopodium":10},{"posicion":2,"username":"asiermaster","oro":6,"plata":5,"bronce":5,"nopodium":7},{"posicion":3,"username":"manaria","oro":3,"plata":3,"bronce":2,"nopodium":15},{"posicion":4,"username":"Jonel","oro":3,"plata":1,"bronce":0,"nopodium":19},{"posicion":5,"username":"runspeltinskin","oro":2,"plata":3,"bronce":4,"nopodium":14},{"posicion":6,"username":"galdi","oro":1,"plata":3,"bronce":0,"nopodium":17},{"posicion":7,"username":"berasa","oro":1,"plata":1,"bronce":2,"nopodium":16},{"posicion":8,"username":"OIER19","oro":0,"plata":3,"bronce":7,"nopodium":13},{"posicion":9,"username":"baxxter","oro":0,"plata":1,"bronce":1,"nopodium":4},{"posicion":10,"username":"zabalaundi","oro":0,"plata":1,"bronce":0,"nopodium":5},{"posicion":11,"username":"korroskada","oro":0,"plata":0,"bronce":0,"nopodium":2},{"posicion":12,"username":"ELORRI","oro":0,"plata":0,"bronce":0,"nopodium":1}];
 var medallero2023=[{"posicion":1,"username":"asiermaster","oro":17,"plata":7,"bronce":2,"nopodium":5},{"posicion":2,"username":"gurrutxaga","oro":8,"plata":6,"bronce":1,"nopodium":15},{"posicion":3,"username":"OIER19","oro":2,"plata":6,"bronce":2,"nopodium":21},{"posicion":4,"username":"galdi","oro":1,"plata":4,"bronce":7,"nopodium":18},{"posicion":5,"username":"Jonel","oro":1,"plata":4,"bronce":3,"nopodium":21},{"posicion":6,"username":"manaria","oro":1,"plata":2,"bronce":3,"nopodium":19},{"posicion":7,"username":"zabalaundi","oro":1,"plata":1,"bronce":2,"nopodium":11},{"posicion":8,"username":"runspeltinskin","oro":0,"plata":1,"bronce":7,"nopodium":22},{"posicion":9,"username":"berasa","oro":0,"plata":0,"bronce":4,"nopodium":21}];
@@ -110,124 +60,16 @@ var medallero2019=[{"posicion":1,"username":"asiermaster","oro":9,"plata":6,"bro
 var medallero2018=[{"posicion":1,"username":"asiermaster","oro":9,"plata":4,"bronce":1,"nopodium":9},{"posicion":2,"username":"berasa","oro":4,"plata":2,"bronce":4,"nopodium":13},{"posicion":3,"username":"gurrutxaga","oro":3,"plata":8,"bronce":5,"nopodium":7},{"posicion":4,"username":"OIER19","oro":3,"plata":2,"bronce":5,"nopodium":13},{"posicion":5,"username":"runspeltinskin","oro":3,"plata":1,"bronce":3,"nopodium":16},{"posicion":6,"username":"Jonel","oro":1,"plata":2,"bronce":0,"nopodium":20},{"posicion":7,"username":"manaria","oro":0,"plata":2,"bronce":5,"nopodium":12},{"posicion":8,"username":"ELORRI","oro":0,"plata":1,"bronce":0,"nopodium":6},{"posicion":9,"username":"JonBaraja","oro":0,"plata":1,"bronce":0,"nopodium":2},{"posicion":10,"username":"gorkaolaso","oro":0,"plata":0,"bronce":0,"nopodium":1}];
 var medallero2017=[{"posicion":1,"username":"gurrutxaga","oro":7,"plata":3,"bronce":1,"nopodium":12},{"posicion":2,"username":"asiermaster","oro":5,"plata":4,"bronce":3,"nopodium":9},{"posicion":3,"username":"berasa","oro":3,"plata":5,"bronce":6,"nopodium":9},{"posicion":4,"username":"runspeltinskin","oro":2,"plata":3,"bronce":0,"nopodium":17},{"posicion":5,"username":"JonBaraja","oro":2,"plata":0,"bronce":3,"nopodium":12},{"posicion":6,"username":"OIER19","oro":1,"plata":3,"bronce":2,"nopodium":17},{"posicion":7,"username":"Jonel","oro":1,"plata":2,"bronce":3,"nopodium":17},{"posicion":8,"username":"manaria","oro":1,"plata":2,"bronce":2,"nopodium":17},{"posicion":9,"username":"galdi","oro":1,"plata":1,"bronce":2,"nopodium":15},{"posicion":10,"username":"gorkaolaso","oro":0,"plata":0,"bronce":1,"nopodium":0},{"posicion":11,"username":"ELORRI","oro":0,"plata":0,"bronce":0,"nopodium":4}];
 var medallero2016=[{"posicion":1,"username":"asiermaster","oro":7,"plata":3,"bronce":1,"nopodium":12},{"posicion":2,"username":"gurrutxaga","oro":6,"plata":3,"bronce":5,"nopodium":9},{"posicion":3,"username":"runspeltinskin","oro":3,"plata":1,"bronce":1,"nopodium":18},{"posicion":4,"username":"berasa","oro":3,"plata":0,"bronce":2,"nopodium":18},{"posicion":5,"username":"JonBaraja","oro":2,"plata":3,"bronce":5,"nopodium":11},{"posicion":6,"username":"Jonel","oro":1,"plata":3,"bronce":1,"nopodium":16},{"posicion":7,"username":"manaria","oro":1,"plata":2,"bronce":0,"nopodium":20},{"posicion":8,"username":"OIER19","oro":0,"plata":4,"bronce":3,"nopodium":16},{"posicion":9,"username":"gorkaolaso","oro":0,"plata":3,"bronce":1,"nopodium":17},{"posicion":10,"username":"galdi","oro":0,"plata":1,"bronce":4,"nopodium":18}];
+var medallero2015=[{"posicion":1,"username":"asiermaster","oro":6,"plata":4,"bronce":3,"nopodium":8},{"posicion":2,"username":"gurrutxaga","oro":5,"plata":3,"bronce":2,"nopodium":11},{"posicion":3,"username":"OIER19","oro":3,"plata":2,"bronce":3,"nopodium":13},{"posicion":4,"username":"galdi","oro":2,"plata":1,"bronce":5,"nopodium":13},{"posicion":5,"username":"berasa","oro":2,"plata":1,"bronce":2,"nopodium":16},{"posicion":6,"username":"Jonel","oro":1,"plata":2,"bronce":1,"nopodium":17},{"posicion":7,"username":"manaria","oro":1,"plata":1,"bronce":1,"nopodium":17},{"posicion":8,"username":"JonBaraja","oro":1,"plata":1,"bronce":1,"nopodium":3},{"posicion":9,"username":"gorkaolaso","oro":0,"plata":6,"bronce":2,"nopodium":12},{"posicion":10,"username":"runspeltinskin","oro":0,"plata":0,"bronce":1,"nopodium":19},{"posicion":11,"username":"korroskada","oro":0,"plata":0,"bronce":0,"nopodium":2},{"posicion":12,"username":"baxxter","oro":0,"plata":0,"bronce":0,"nopodium":1}];
+var medallero2014=[{"posicion":1,"username":"asiermaster","oro":6,"plata":2,"bronce":4,"nopodium":9},{"posicion":2,"username":"gurrutxaga","oro":4,"plata":2,"bronce":2,"nopodium":13},{"posicion":3,"username":"Jonel","oro":3,"plata":3,"bronce":2,"nopodium":13},{"posicion":4,"username":"gorkaolaso","oro":2,"plata":4,"bronce":2,"nopodium":13},{"posicion":5,"username":"JonBaraja","oro":2,"plata":3,"bronce":0,"nopodium":12},{"posicion":6,"username":"runspeltinskin","oro":2,"plata":0,"bronce":2,"nopodium":17},{"posicion":7,"username":"zabalaundi","oro":1,"plata":1,"bronce":2,"nopodium":11},{"posicion":8,"username":"OIER19","oro":1,"plata":0,"bronce":3,"nopodium":17},{"posicion":9,"username":"galdi","oro":0,"plata":5,"bronce":1,"nopodium":15},{"posicion":10,"username":"berasa","oro":0,"plata":1,"bronce":2,"nopodium":15},{"posicion":11,"username":"manaria","oro":0,"plata":0,"bronce":1,"nopodium":10}];
+var medallero2013=[{"posicion":1,"username":"asiermaster","oro":3,"plata":1,"bronce":1,"nopodium":5},{"posicion":2,"username":"manaria","oro":3,"plata":0,"bronce":0,"nopodium":6},{"posicion":3,"username":"Jonel","oro":2,"plata":0,"bronce":0,"nopodium":8},{"posicion":4,"username":"OIER19","oro":1,"plata":0,"bronce":1,"nopodium":8},{"posicion":5,"username":"zabalaundi","oro":1,"plata":0,"bronce":0,"nopodium":3},{"posicion":6,"username":"JonBaraja","oro":0,"plata":2,"bronce":3,"nopodium":2},{"posicion":7,"username":"gorkaolaso","oro":0,"plata":2,"bronce":2,"nopodium":6},{"posicion":8,"username":"gurrutxaga","oro":0,"plata":2,"bronce":1,"nopodium":7},{"posicion":9,"username":"galdi","oro":0,"plata":2,"bronce":0,"nopodium":8},{"posicion":10,"username":"berasa","oro":0,"plata":1,"bronce":1,"nopodium":8},{"posicion":11,"username":"runspeltinskin","oro":0,"plata":0,"bronce":1,"nopodium":9},{"posicion":12,"username":"baxxter","oro":0,"plata":0,"bronce":0,"nopodium":1}];
+var medallero2012=[{"posicion":1,"username":"JonBaraja","oro":2,"plata":1,"bronce":0,"nopodium":7},{"posicion":2,"username":"galdi","oro":2,"plata":1,"bronce":0,"nopodium":7},{"posicion":3,"username":"Jonel","oro":2,"plata":0,"bronce":0,"nopodium":8},{"posicion":4,"username":"OIER19","oro":1,"plata":2,"bronce":5,"nopodium":2},{"posicion":5,"username":"manaria","oro":1,"plata":1,"bronce":0,"nopodium":7},{"posicion":6,"username":"berasa","oro":1,"plata":0,"bronce":4,"nopodium":5},{"posicion":7,"username":"gorkaolaso","oro":1,"plata":0,"bronce":0,"nopodium":6},{"posicion":8,"username":"zabalaundi","oro":0,"plata":3,"bronce":0,"nopodium":7},{"posicion":9,"username":"asiermaster","oro":0,"plata":2,"bronce":1,"nopodium":7},{"posicion":10,"username":"runspeltinskin","oro":0,"plata":0,"bronce":0,"nopodium":10},{"posicion":11,"username":"gurrutxaga","oro":0,"plata":0,"bronce":0,"nopodium":10},{"posicion":12,"username":"baxxter","oro":0,"plata":0,"bronce":0,"nopodium":4},{"posicion":13,"username":"aberasa","oro":0,"plata":0,"bronce":0,"nopodium":4}];
+var medallero2011=[{"posicion":1,"username":"JonBaraja","oro":4,"plata":1,"bronce":0,"nopodium":4},{"posicion":2,"username":"asiermaster","oro":2,"plata":1,"bronce":1,"nopodium":5},{"posicion":3,"username":"aberasa","oro":1,"plata":2,"bronce":0,"nopodium":5},{"posicion":4,"username":"gorkaolaso","oro":1,"plata":0,"bronce":2,"nopodium":6},{"posicion":5,"username":"baxxter","oro":1,"plata":0,"bronce":1,"nopodium":4},{"posicion":6,"username":"galdi","oro":0,"plata":2,"bronce":0,"nopodium":7},{"posicion":7,"username":"OIER19","oro":0,"plata":1,"bronce":1,"nopodium":7},{"posicion":8,"username":"berasa","oro":0,"plata":1,"bronce":1,"nopodium":7},{"posicion":9,"username":"Jonel","oro":0,"plata":1,"bronce":0,"nopodium":7},{"posicion":10,"username":"gurrutxaga","oro":0,"plata":0,"bronce":1,"nopodium":8},{"posicion":11,"username":"zabalaundi","oro":0,"plata":0,"bronce":1,"nopodium":8},{"posicion":12,"username":"manaria","oro":0,"plata":0,"bronce":1,"nopodium":6},{"posicion":13,"username":"runspeltinskin","oro":0,"plata":0,"bronce":0,"nopodium":9}];
+var medallero2010=[{"posicion":1,"username":"asiermaster","oro":3,"plata":0,"bronce":1,"nopodium":5},{"posicion":2,"username":"gorkaolaso","oro":2,"plata":2,"bronce":0,"nopodium":5},{"posicion":3,"username":"berasa","oro":1,"plata":2,"bronce":0,"nopodium":6},{"posicion":4,"username":"JonBaraja","oro":1,"plata":2,"bronce":0,"nopodium":3},{"posicion":5,"username":"galdi","oro":1,"plata":1,"bronce":0,"nopodium":7},{"posicion":6,"username":"OIER19","oro":1,"plata":0,"bronce":3,"nopodium":5},{"posicion":7,"username":"zabalaundi","oro":0,"plata":2,"bronce":1,"nopodium":4},{"posicion":8,"username":"gurrutxaga","oro":0,"plata":0,"bronce":1,"nopodium":8},{"posicion":9,"username":"runspeltinskin","oro":0,"plata":0,"bronce":1,"nopodium":8},{"posicion":10,"username":"Jonel","oro":0,"plata":0,"bronce":1,"nopodium":7},{"posicion":11,"username":"manaria","oro":0,"plata":0,"bronce":1,"nopodium":7},{"posicion":12,"username":"baxxter","oro":0,"plata":0,"bronce":0,"nopodium":7},{"posicion":13,"username":"aberasa","oro":0,"plata":0,"bronce":0,"nopodium":3}];
+var medallero2009=[{"posicion":1,"username":"berasa","oro":2,"plata":0,"bronce":0,"nopodium":4},{"posicion":2,"username":"galdi","oro":1,"plata":1,"bronce":0,"nopodium":4},{"posicion":3,"username":"asiermaster","oro":1,"plata":0,"bronce":1,"nopodium":4},{"posicion":4,"username":"JonBaraja","oro":1,"plata":0,"bronce":1,"nopodium":1},{"posicion":5,"username":"gorkaolaso","oro":1,"plata":0,"bronce":0,"nopodium":1},{"posicion":6,"username":"OIER19","oro":0,"plata":2,"bronce":0,"nopodium":4},{"posicion":7,"username":"manaria","oro":0,"plata":1,"bronce":1,"nopodium":4},{"posicion":8,"username":"baxxter","oro":0,"plata":1,"bronce":0,"nopodium":5},{"posicion":9,"username":"castlefont","oro":0,"plata":1,"bronce":0,"nopodium":0},{"posicion":10,"username":"Jonel","oro":0,"plata":0,"bronce":2,"nopodium":3},{"posicion":11,"username":"runspeltinskin","oro":0,"plata":0,"bronce":1,"nopodium":5},{"posicion":12,"username":"zabalaundi","oro":0,"plata":0,"bronce":0,"nopodium":2},{"posicion":13,"username":"gurrutxaga","oro":0,"plata":0,"bronce":0,"nopodium":2}];
+var medallero2008=[{"posicion":1,"username":"OIER19","oro":2,"plata":0,"bronce":1,"nopodium":1},{"posicion":2,"username":"asiermaster","oro":1,"plata":3,"bronce":1,"nopodium":0},{"posicion":3,"username":"manaria","oro":1,"plata":0,"bronce":0,"nopodium":1},{"posicion":4,"username":"baxxter","oro":1,"plata":0,"bronce":0,"nopodium":1},{"posicion":5,"username":"berasa","oro":0,"plata":2,"bronce":1,"nopodium":2},{"posicion":6,"username":"galdi","oro":0,"plata":0,"bronce":1,"nopodium":0},{"posicion":7,"username":"runspeltinskin","oro":0,"plata":0,"bronce":0,"nopodium":2}];
+var medallero2007=[{"posicion":1,"username":"berasa","oro":3,"plata":0,"bronce":0,"nopodium":0},{"posicion":2,"username":"manaria","oro":0,"plata":2,"bronce":1,"nopodium":0},{"posicion":3,"username":"OIER19","oro":0,"plata":1,"bronce":1,"nopodium":0}];
 
-var medallero2010 = [
-    {
-        "posicion": 1, "nombre": "asiermaster",
-        "oro": 3, "plata": 0, "bronce": 1, "npod": 5
-    },{
-        "posicion": 2, "nombre": "gorkaolaso",
-        "oro": 2, "plata": 2, "bronce": 0, "npod": 5
-    },{
-        "posicion": 3, "nombre": "berasa",
-        "oro": 1, "plata": 2, "bronce": 0, "npod": 6
-    },{
-        "posicion": 4, "nombre": "JonBaraja",
-        "oro": 1, "plata": 2, "bronce": 0, "npod": 3
-    },{
-        "posicion": 5, "nombre": "galdi",
-        "oro": 1, "plata": 1, "bronce": 0, "npod": 7
-    },{
-        "posicion": 6, "nombre": "OIER19",
-        "oro": 1, "plata": 0,  "bronce": 3, "npod": 5
-    },    {
-        "posicion": 7, "nombre": "zabalaundi",
-        "oro": 0, "plata": 2, "bronce": 1, "npod": 4
-    },{
-        "posicion": 8, "nombre": "runspeltinskin",
-        "oro": 0, "plata": 0, "bronce": 1, "npod": 8
-    },{
-        "posicion": 9, "nombre": "gurrutxaga",
-        "oro": 0, "plata": 0, "bronce": 1, "npod": 8
-    },{
-        "posicion": 10, "nombre": "manaria",
-        "oro": 0, "plata": 0, "bronce": 1, "npod": 7
-    },{
-        "posicion": 11, "nombre": "Jonel",
-        "oro": 0, "plata": 0, "bronce": 1, "npod": 7
-    },{
-        "posicion": 12, "nombre": "baxxter",
-        "oro": 0, "plata": 0, "bronce": 0, "npod": 7
-    },{
-        "posicion": 13, "nombre": "aberasa",
-        "oro": 0, "plata": 0, "bronce": 0, "npod": 3
-    }
-];
-var medallero2009 = [
-    {
-        "posicion": 1, "nombre": "berasa",
-        "oro": 2, "plata": 0, "bronce": 0, "npod": 4
-    },{
-        "posicion": 2, "nombre": "galdi",
-        "oro": 1, "plata": 1, "bronce": 0, "npod": 4
-    },{
-        "posicion": 3, "nombre": "asiermaster",
-        "oro": 1, "plata": 0, "bronce": 1, "npod": 4
-    },{
-        "posicion": 4, "nombre": "JonBaraja",
-        "oro": 1, "plata": 0, "bronce": 1, "npod": 1
-    },{
-        "posicion": 5, "nombre": "gorkaolaso",
-        "oro": 1, "plata": 0, "bronce": 0, "npod": 1
-    },{
-        "posicion": 6, "nombre": "OIER19",
-        "oro": 0, "plata": 2,  "bronce": 0, "npod": 4
-    },    {
-        "posicion": 7, "nombre": "manaria",
-        "oro": 0, "plata": 1, "bronce": 1, "npod": 4
-    },{
-        "posicion": 8, "nombre": "baxxter",
-        "oro": 0, "plata": 1, "bronce": 0, "npod": 5
-    },{
-        "posicion": 9, "nombre": "castlefont",
-        "oro": 0, "plata": 1, "bronce": 0, "npod": 0
-    },{
-        "posicion": 10, "nombre": "Jonel",
-        "oro": 0, "plata": 0, "bronce": 2, "npod": 3
-    },{
-        "posicion": 11, "nombre": "runspeltinskin",
-        "oro": 0, "plata": 0, "bronce": 1, "npod": 5
-    },{
-        "posicion": 12, "nombre": "zabalaundi",
-        "oro": 0, "plata": 0, "bronce": 0, "npod": 2
-    },{
-        "posicion": 13, "nombre": "gurrutxaga",
-        "oro": 0, "plata": 0, "bronce": 0, "npod": 2
-    }
-];
-var medallero2008 = [
-    {
-        "posicion": 1, "nombre": "OIER19",
-        "oro": 2, "plata": 0, "bronce": 1, "npod": 1
-    },{
-        "posicion": 2, "nombre": "asiermaster",
-        "oro": 1, "plata": 3, "bronce": 1, "npod": 0
-    },{
-        "posicion": 3, "nombre": "baxxter",
-        "oro": 1, "plata": 0, "bronce": 0, "npod": 1
-    },{
-        "posicion": 4, "nombre": "manaria",
-        "oro": 1, "plata": 0, "bronce": 0, "npod": 1
-    },{
-        "posicion": 5, "nombre": "berasa",
-        "oro": 0, "plata": 2, "bronce": 1, "npod": 2
-    },{
-        "posicion": 6, "nombre": "galdi",
-        "oro": 0, "plata": 0, "bronce": 1, "npod": 0
-    },{
-        "posicion": 7, "nombre": "runspeltinskin",
-        "oro": 0, "plata": 0, "bronce": 0, "npod": 2
-    }
-];
-var medallero2007 = [
-    {
-        "posicion": 1, "nombre": "berasa",
-        "oro": 3, "plata": 0, "bronce": 0, "npod": 0
-    },{
-        "posicion": 2, "nombre": "manaria",
-        "oro": 0, "plata": 2, "bronce": 1, "npod": 0
-    },{
-        "posicion": 3, "nombre": "OIER19",
-        "oro": 0, "plata": 1, "bronce": 1, "npod": 0
-    }
-];
+/** Data puntos */
+
+var puntos_totales=[{"posicion":1,"participante_username":"asiermaster","puntos_totales":653713},{"posicion":2,"participante_username":"OIER19","puntos_totales":600910},{"posicion":3,"participante_username":"gurrutxaga","puntos_totales":581350},{"posicion":4,"participante_username":"berasa","puntos_totales":534220},{"posicion":5,"participante_username":"runspeltinskin","puntos_totales":510715},{"posicion":6,"participante_username":"manaria","puntos_totales":500192},{"posicion":7,"participante_username":"Jonel","puntos_totales":496036},{"posicion":8,"participante_username":"galdi","puntos_totales":494373},{"posicion":9,"participante_username":"JonBaraja","puntos_totales":265976},{"posicion":10,"participante_username":"gorkaolaso","puntos_totales":253301},{"posicion":11,"participante_username":"zabalaundi","puntos_totales":164531},{"posicion":12,"participante_username":"baxxter","puntos_totales":94449},{"posicion":13,"participante_username":"aberasa","puntos_totales":38960},{"posicion":14,"participante_username":"ELORRI","puntos_totales":37267},{"posicion":15,"participante_username":"korroskada","puntos_totales":13130},{"posicion":16,"participante_username":"castlefont","puntos_totales":695}];
