@@ -49,6 +49,58 @@ var medalleroHistorico = [
         "oro": 0, "plata": 0, "bronce": 0, "npod": 4
     }
 ];
+var puntos_totales = [
+	{
+		"posicion" : 1,		"participante_username" : "asiermaster",		"puntos_totales" : 653713
+	},
+	{
+		"posicion" : 2,		"participante_username" : "OIER19",		"puntos_totales" : 600910
+	},
+	{
+		"posicion" : 3,		"participante_username" : "gurrutxaga",		"puntos_totales" : 581350
+	},
+	{
+		"posicion" : 4,		"participante_username" : "berasa",		"puntos_totales" : 534220
+	},
+	{
+		"posicion" : 5,		"participante_username" : "runspeltinskin",		"puntos_totales" : 510715
+	},
+	{
+		"posicion" : 6,		"participante_username" : "manaria",		"puntos_totales" : 500192
+	},
+	{
+		"posicion" : 7,		"participante_username" : "Jonel",		"puntos_totales" : 496036
+	},
+	{
+		"posicion" : 8,		"participante_username" : "galdi",		"puntos_totales" : 494373
+	},
+	{
+		"posicion" : 9,		"participante_username" : "JonBaraja",		"puntos_totales" : 265976
+	},
+	{
+		"posicion" : 10,		"participante_username" : "gorkaolaso",		"puntos_totales" : 253301
+	},
+	{
+		"posicion" : 11,		"participante_username" : "zabalaundi",		"puntos_totales" : 164531
+	},
+	{
+		"posicion" : 12,		"participante_username" : "baxxter",		"puntos_totales" : 94449
+	},
+	{
+		"posicion" : 13,		"participante_username" : "aberasa",		"puntos_totales" : 38960
+	},
+	{
+		"posicion" : 14,		"participante_username" : "ELORRI",		"puntos_totales" : 37267
+	},
+	{
+		"posicion" : 15,		"participante_username" : "korroskada",		"puntos_totales" : 13130
+	},
+	{
+		"posicion" : 16,		"participante_username" : "castlefont",		"puntos_totales" : 695
+	}
+];
+
+
 var medallero2024 = [
     {
         "posicion": 1, "nombre": "gurrutxaga",

@@ -59,19 +59,16 @@
       </nav>
       <!-- Page content-->
       <div class="container-fluid">
+        <div class="row">
         <!-- First half -->
-        <div class="col-md-6">
-          <h2 id="tableTitle"></h2>
-          <table class="table table-striped w-auto" id="tableHisEdi" data-search="true" data-search-align="left">
+        <div class="col-md-4">
+          <h2 id="medalleroTitle"></h2>
+          <table class="table table-striped w-auto" id="tableHisEdi" data-search="false" data-search-align="left">
             <colgroup>
-              <col span="2">
-              </col>
-              <col class="bg-gold">
-              </col>
-              <col class="bg-silver">
-              </col>
-              <col class="bg-bronze">
-              </col>
+              <col span="2"></col>
+              <col class="bg-gold"></col>
+              <col class="bg-silver"></col>
+              <col class="bg-bronze"></col>
             </colgroup>
             <thead>
               <tr>
@@ -88,12 +85,23 @@
             </tbody>
           </table>
         </div>
-         <!-- First half -->
-        <div class="col-md-6">
-          <h2 >miau</h2>
-          <p>asfdasdf</p>
+         <!-- Second half -->
+        <div class="col-md-4">
+          <h2 id="puntosTitle"></h2>
+          <table class="table table-striped w-auto" id="tablePuntos" data-search="false" data-search-align="left">
+            <colgroup>
+              <col span="3"></col>
+            </colgroup>
+            <thead>
+              <tr>
+                <th data-field="posicion" data-sortable="false">Posicion</th>
+                <th data-field="participante_username" data-sortable="false">Nombre</th>
+                <th data-field="puntos_totales" data-sortable="false">Puntos</th>
+              </tr>
+            </thead>
+          </table>
         </div>
-        
+      </div>
 
         
       </div>

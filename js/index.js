@@ -9,10 +9,12 @@
 
 window.addEventListener('DOMContentLoaded', event => {
 
-    var $table = $('#tableHisEdi')
+    var $table = $('#tableHisEdi');
+    var $tablePuntos =  $('#tablePuntos');
 
     $(function () {
       $table.bootstrapTable({});
+      $tablePuntos.bootstrapTable({});
     });
     // Side bar events
     addToggleSideBar();
@@ -70,14 +72,20 @@ function loadMedalleroHistorico(){
     var $table = $('#tableHisEdi');
     $table.bootstrapTable('load', medalleroHistorico);
     $table.bootstrapTable('sortBy', {field: 'posicion', sortOrder: 'asc'});
-    $("#tableTitle").html("Medallero histórico");
+    var $tablePuntos =  $('#tablePuntos');
+    $tablePuntos.bootstrapTable('load', puntos_totales);
+    $tablePuntos.bootstrapTable('sortBy', {field: 'posicion', sortOrder: 'asc'});
+
+    $("#medalleroTitle").html("Medallero histórico");
+    $("#puntosTitle").html("Puntos histórico");
 }
 
 function loadMedalleroYear(year){
     var $table = $('#tableHisEdi');
     $table.bootstrapTable('load', window["medallero" + year]);
     $table.bootstrapTable('sortBy', {field: 'posicion', sortOrder: 'asc'});
-    $("#tableTitle").html("Medallero " + year);
+    $("#medalleroTitle").html("Medallero " + year);
+    $("#puntosTitle").html("Puntos " + year);
 }
 
 function goToDefaultMedallero(){
