@@ -36,6 +36,8 @@
         <a class="list-group-item list-group-item-action list-group-item-light p-3" id="medallero_2024"href="#!">Medallero 2024</a>
         <a class="list-group-item list-group-item-action list-group-item-light p-3" id="medallero_2023"href="#!">Medallero 2023</a>
         <a class="list-group-item list-group-item-action list-group-item-light p-3" id="medallero_2022"href="#!">Medallero 2022</a>
+        <a class="list-group-item list-group-item-action list-group-item-light p-3" id="medallero_2021"href="#!">Medallero 2021</a>
+        <a class="list-group-item list-group-item-action list-group-item-light p-3" id="medallero_2020"href="#!">Medallero 2020</a>
         <a class="list-group-item list-group-item-action list-group-item-light p-3" id="medallero_2010"href="#!">Medallero 2010</a>
         <a class="list-group-item list-group-item-action list-group-item-light p-3" id="medallero_2009"href="#!">Medallero 2009</a>
         <a class="list-group-item list-group-item-action list-group-item-light p-3" id="medallero_2008"href="#!">Medallero 2008</a>
@@ -60,48 +62,48 @@
       <!-- Page content-->
       <div class="container-fluid">
         <div class="row">
-        <!-- First half -->
-        <div class="col-md-4">
-          <h2 id="medalleroTitle"></h2>
-          <table class="table table-striped w-auto" id="tableHisEdi" data-search="false" data-search-align="left">
-            <colgroup>
-              <col span="2"></col>
-              <col class="bg-gold"></col>
-              <col class="bg-silver"></col>
-              <col class="bg-bronze"></col>
-            </colgroup>
-            <thead>
-              <tr>
-                <th data-field="posicion" data-sortable="true">Posicion</th>
-                <th data-field="nombre" data-sortable="true">Nombre</th>
-                <th data-field="oro" data-sortable="true">Oro</th>
-                <th data-field="plata" data-sortable="true">Plata</th>
-                <th data-field="bronce" data-sortable="true">Bronce</th>
-                <th data-field="npod" data-sortable="true">No Podium</th>
-              </tr>
-            </thead>
-            <tbody>
-        
-            </tbody>
-          </table>
+          <!-- First half -->
+          <div class="col-lg-6">
+            <h2 id="medalleroTitle"></h2>
+            <table class="table table-striped w-auto" id="tableHisEdi" data-search="false" data-search-align="left">
+              <colgroup>
+                <col span="2"></col>
+                <col class="bg-gold"></col>
+                <col class="bg-silver"></col>
+                <col class="bg-bronze"></col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th data-field="posicion" data-sortable="true">Posicion</th>
+                  <th data-field="username" data-sortable="true">Nombre</th>
+                  <th data-field="oro" data-sortable="true">Oro</th>
+                  <th data-field="plata" data-sortable="true">Plata</th>
+                  <th data-field="bronce" data-sortable="true">Bronce</th>
+                  <th data-field="nopodium" data-sortable="true">No Podium</th>
+                </tr>
+              </thead>
+              <tbody>
+      
+              </tbody>
+            </table>
+          </div>
+          <!-- Second half -->
+          <div class="col-lg-4">
+            <h2 id="puntosTitle"></h2>
+            <table class="table table-striped w-auto" id="tablePuntos" data-search="false" data-search-align="left" data-row-style="puntosRowStyle">
+              <colgroup>
+                <col span="3"></col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th data-field="posicion" data-sortable="false">Posicion</th>
+                  <th data-field="participante_username" data-sortable="false">Nombre</th>
+                  <th data-field="puntos_totales" data-sortable="false">Puntos</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
         </div>
-         <!-- Second half -->
-        <div class="col-md-4">
-          <h2 id="puntosTitle"></h2>
-          <table class="table table-striped w-auto" id="tablePuntos" data-search="false" data-search-align="left">
-            <colgroup>
-              <col span="3"></col>
-            </colgroup>
-            <thead>
-              <tr>
-                <th data-field="posicion" data-sortable="false">Posicion</th>
-                <th data-field="participante_username" data-sortable="false">Nombre</th>
-                <th data-field="puntos_totales" data-sortable="false">Puntos</th>
-              </tr>
-            </thead>
-          </table>
-        </div>
-      </div>
 
         
       </div>

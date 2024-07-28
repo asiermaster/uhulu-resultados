@@ -84,6 +84,9 @@ function loadMedalleroYear(year){
     var $table = $('#tableHisEdi');
     $table.bootstrapTable('load', window["medallero" + year]);
     $table.bootstrapTable('sortBy', {field: 'posicion', sortOrder: 'asc'});
+    var $tablePuntos =  $('#tablePuntos');
+    $tablePuntos.bootstrapTable('load', []);
+    $tablePuntos.bootstrapTable('sortBy', {field: 'posicion', sortOrder: 'asc'});
     $("#medalleroTitle").html("Medallero " + year);
     $("#puntosTitle").html("Puntos " + year);
 }
@@ -92,3 +95,20 @@ function goToDefaultMedallero(){
     const sidebarMealleroHist = document.body.querySelector('#medallero_historico');
     sidebarMealleroHist.click();
 }
+
+function puntosRowStyle(row, index) {
+    var classes = [
+      'bg-gold',
+      'bg-silver',
+      'bg-bronze'
+    ];
+
+    if (row.posicion <4) {
+      return {
+        classes: classes[row.posicion-1]
+      }
+    }
+    return {
+      
+    }
+  }
