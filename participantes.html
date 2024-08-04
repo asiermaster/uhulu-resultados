@@ -14,6 +14,8 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="css/medalStyles.css">
   <link rel="stylesheet" href="css/templateStyles.css">
+  <link rel="stylesheet" href="css/participantesStyle.css">
+  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.6/dist/bootstrap-table.min.css">
 
   <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
@@ -45,7 +47,7 @@
     <!-- Page content wrapper-->
     <div id="page-content-wrapper">
       <!-- Top navigation-->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
         <div class="container-fluid">
             <button class="btn btn-primary" id="sidebarToggle">Menu lateral</button>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -59,40 +61,61 @@
       </nav>
       <!-- Page content-->
       <div class="container-fluid">
-        <h2 id="tableTitle"></h2>
-
-        <table class="table table-striped w-auto" id="tableHisEdi" data-search="true" data-search-align="left">
-          <colgroup>
-            <col span="2">
-            </col>
-            <col class="bg-gold">
-            </col>
-            <col class="bg-silver">
-            </col>
-            <col class="bg-bronze">
-            </col>
-          </colgroup>
-          <thead>
-            <tr>
-              <th data-field="posicion" data-sortable="true">Posicion</th>
-              <th data-field="nombre" data-sortable="true">Nombre</th>
-              <th data-field="oro" data-sortable="true">Oro</th>
-              <th data-field="plata" data-sortable="true">Plata</th>
-              <th data-field="bronce" data-sortable="true">Bronce</th>
-              <th data-field="npod" data-sortable="true">No Podium</th>
-            </tr>
-          </thead>
-          <tbody>
-      
-          </tbody>
-        </table>
+        <h2>Participantes</h2>
+        <!-- Avatares participantes -->
+        <div class="row">
+          <!-- Columna 1 -->
+          <div class="col-md-3 col-sm-3 col-xs-12">
+            <div class="row participantes-card text-center">
+              <div class="col-md-12 card-section1">
+                <img src="images/julian-alaphilippe-2020.jpeg">
+              </div>
+              <div class="col-md-12 card-section2 pb-3">
+                <p>berasa</p>
+              </div>
+            </div>
+          </div>
+          <!-- Columna 2 -->
+          <div class="col-md-3 col-sm-3 col-xs-12">
+            <div class="row participantes-card text-center">
+              <div class="col-md-12 card-section1">
+                <img src="images/jerome-pineau-2009.jpg">
+              </div>
+              <div class="col-md-12 card-section2 pb-3">
+                <p>manaria</p>
+              </div>
+            </div>
+          </div>
+          <!-- Columna 3 -->
+          <div class="col-md-3 col-sm-3 col-xs-12">
+            <div class="row participantes-card text-center">
+              <div class="col-md-12 card-section1">
+                <img src="images/julian-alaphilippe-2020.jpeg">
+              </div>
+              <div class="col-md-12 card-section2 pb-3">
+                <p>OIER19</p>
+              </div>
+            </div>
+          </div>
+          <!-- Columna 4 -->
+          <div class="col-md-3 col-sm-3 col-xs-12">
+            <div class="row participantes-card text-center">
+              <div class="col-md-12 card-section1">
+                <img src="images/kevin_reza_2013.jpg">
+              </div>
+              <div class="col-md-12 card-section2 pb-3">
+                <p>baxxter</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
 
   </div>
   
-  <script src="js/scripts.js"></script>
+  <!--<script src="js/scripts.js"></script> -->
 
 </body>
 
