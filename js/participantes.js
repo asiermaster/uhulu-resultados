@@ -1,12 +1,3 @@
-/*!
-* Start Bootstrap - Simple Sidebar v6.0.6 (https://startbootstrap.com/template/simple-sidebar)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-simple-sidebar/blob/master/LICENSE)
-*/
-// 
-// Scripts
-// 
-
 window.addEventListener('DOMContentLoaded', event => {
 
     var $table = $('#tableHisEdi');
@@ -18,10 +9,8 @@ window.addEventListener('DOMContentLoaded', event => {
     });
     // Side bar events
     addToggleSideBar();
-    addEventMedalleroHistorico();
-    addEventMedalleroYear();
     //Go to default
-    goToDefaultMedallero();
+    addChart();
 
 });
 
@@ -42,73 +31,26 @@ function addToggleSideBar(){
     }
 }
 
-function addEventMedalleroHistorico(){
-    const sidebarMealleroHist = document.body.querySelector('#medallero_historico');
-    if (sidebarMealleroHist) {
-        sidebarMealleroHist.addEventListener('click', event => {
-            event.preventDefault();
-            $(function () {
-                loadMedalleroHistorico();
-              })
-            
-        });
-    }
-}
+function addChart(){
+    const ctx = document.getElementById('resultChart');
 
-function addEventMedalleroYear(){
-    document.body.querySelectorAll("[id^='medallero_20']").forEach(function (sidebarMealleroYear) {
-        sidebarMealleroYear.addEventListener('click', event => {
-            event.preventDefault();
-            var idEvent = event.currentTarget.getAttribute('id');
-            $(function () {
-                loadMedalleroYear(idEvent.substr(idEvent.length - 4));
-              })
-            
-        });
-    });
-}
-
-function loadMedalleroHistorico(){
-    var $table = $('#tableHisEdi');
-    $table.bootstrapTable('load', medalleroHistorico);
-    $table.bootstrapTable('sortBy', {field: 'posicion', sortOrder: 'asc'});
-    var $tablePuntos =  $('#tablePuntos');
-    $tablePuntos.bootstrapTable('load', puntos_totales);
-    $tablePuntos.bootstrapTable('sortBy', {field: 'posicion', sortOrder: 'asc'});
-
-    $("#medalleroTitle").html("Medallero histórico");
-    $("#puntosTitle").html("Puntos histórico");
-}
-
-function loadMedalleroYear(year){
-    var $table = $('#tableHisEdi');
-    $table.bootstrapTable('load', window["medallero" + year]);
-    $table.bootstrapTable('sortBy', {field: 'posicion', sortOrder: 'asc'});
-    var $tablePuntos =  $('#tablePuntos');
-    $tablePuntos.bootstrapTable('load', window["puntos" + year]);
-    $tablePuntos.bootstrapTable('sortBy', {field: 'posicion', sortOrder: 'asc'});
-    $("#medalleroTitle").html("Medallero " + year);
-    $("#puntosTitle").html("Puntos " + year);
-}
-
-function goToDefaultMedallero(){
-    const sidebarMealleroHist = document.body.querySelector('#medallero_historico');
-    sidebarMealleroHist.click();
-}
-
-function puntosRowStyle(row, index) {
-    var classes = [
-      'bg-gold',
-      'bg-silver',
-      'bg-bronze'
-    ];
-
-    if (row.posicion <4) {
-      return {
-        classes: classes[row.posicion-1]
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [1, 15, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+            min: 1,
+            reverse:true
+        }
       }
     }
-    return {
-      
-    }
-  }
+  });
+}

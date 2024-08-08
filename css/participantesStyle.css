@@ -1,3 +1,8 @@
+.result-section{
+    height: 300px;
+    padding: 10px 0px 10px 0px;
+}
+
 .participantes-card{
     border-radius: 2px;
     border-top: 6px solid #5DDDD3;
@@ -5,9 +10,10 @@
     margin: 0px;
     background-color: #FFFFFF;
     margin-bottom: 20px;
+    box-shadow: 5px 10px 8px #888888;
 }
 .card-section1{
-    padding: 20px 0px 20px 0px;
+    padding: 10px 0px 10px 0px;
 }
 .card-section1 img{
     border-radius: 20%;
