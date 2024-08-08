@@ -41,6 +41,7 @@ function addEventParticipantes(){
             $(function () {
                 changeResultTitle(userName);
                 addChart(idEvent.toString().split('_')[1]);
+                window.scrollTo(0, 0);
               })
             
         });
@@ -69,15 +70,20 @@ function addChart(idparticipante){
         }]
         },
         options: {
-        scales: {
-            y: {
-                min: 1,
-                reverse:true,
-                ticks: {
-                    stepSize: 1,
+            animation: {
+                y: {
+                  duration: 2000
+                }
+            },
+            scales: {
+                y: {
+                    min: 1,
+                    reverse:true,
+                    ticks: {
+                        stepSize: 1,
+                    }
                 }
             }
-        }
         }
     });
 }
