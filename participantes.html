@@ -33,16 +33,7 @@
     <!-- Sidebar-->
     <div class="border-end bg-white" id="sidebar-wrapper">
       <div class="sidebar-heading border-bottom bg-light">Uhulu Bike tropela</div>
-      <div class="list-group list-group-flush">
-        <a class="list-group-item list-group-item-action list-group-item-light p-3" id="prueba" href="#!">Prueba</a>
-        <!--<a class="list-group-item list-group-item-action list-group-item-light p-3" id="medallero_2024"href="#!">Medallero 2024</a>
-        <a class="list-group-item list-group-item-action list-group-item-light p-3" id="medallero_2023"href="#!">Medallero 2023</a>
-        <a class="list-group-item list-group-item-action list-group-item-light p-3" id="medallero_2022"href="#!">Medallero 2022</a>
-        <a class="list-group-item list-group-item-action list-group-item-light p-3" id="medallero_2010"href="#!">Medallero 2010</a>
-        <a class="list-group-item list-group-item-action list-group-item-light p-3" id="medallero_2009"href="#!">Medallero 2009</a>
-        <a class="list-group-item list-group-item-action list-group-item-light p-3" id="medallero_2008"href="#!">Medallero 2008</a>
-        <a class="list-group-item list-group-item-action list-group-item-light p-3" id="medallero_2007"href="#!">Medallero 2007</a>-->
-      </div>
+      <div class="list-group list-group-flush"></div>
     </div>
     <!-- Page content wrapper-->
     <div id="page-content-wrapper">
@@ -61,7 +52,7 @@
       </nav>
       <!-- Page content-->
       <div class="container-fluid">
-        <h2>Resultados</h2>
+        <h2 id="resultadosTitle">Resultados</h2>
         <div class="row result-section">
           <canvas id="resultChart"></canvas>
         </div>
@@ -71,7 +62,7 @@
         <div class="row">
           <!-- Columna 1 -->
           <div class="col-md-2 col-sm-2 col-xs-12">
-            <div class="row participantes-card text-center">
+            <div id="participante_1" class="row participantes-card text-center">
               <div class="col-md-12 card-section1">
                 <img src="images/julian-alaphilippe-2020.jpeg">
               </div>
@@ -82,7 +73,7 @@
           </div>
           <!-- Columna 2 -->
           <div class="col-md-2 col-sm-2 col-xs-12">
-            <div class="row participantes-card text-center">
+            <div id="participante_2" class="row participantes-card text-center">
               <div class="col-md-12 card-section1">
                 <img src="images/jerome-pineau-2009.jpg">
               </div>
@@ -93,7 +84,7 @@
           </div>
           <!-- Columna 3 -->
           <div class="col-md-2 col-sm-2 col-xs-12">
-            <div class="row participantes-card text-center">
+            <div id="participante_3" class="row participantes-card text-center">
               <div class="col-md-12 card-section1">
                 <img src="images/empty_avatar.jpg">
               </div>
@@ -104,7 +95,7 @@
           </div>
           <!-- Columna 4 -->
           <div class="col-md-2 col-sm-2 col-xs-12">
-            <div class="row participantes-card text-center">
+            <div id="participante_4" class="row participantes-card text-center">
               <div class="col-md-12 card-section1">
                 <img src="images/kevin_reza_2013.jpg">
               </div>
@@ -115,7 +106,7 @@
           </div>
           <!-- Columna 5 -->
           <div class="col-md-2 col-sm-2 col-xs-12">
-            <div class="row participantes-card text-center">
+            <div id="participante_5" class="row participantes-card text-center">
               <div class="col-md-12 card-section1">
                 <img src="images/empty_avatar.jpg">
               </div>
@@ -126,7 +117,7 @@
           </div>
           <!-- Columna 6 -->
           <div class="col-md-2 col-sm-2 col-xs-12">
-            <div class="row participantes-card text-center">
+            <div id="participante_6" class="row participantes-card text-center">
               <div class="col-md-12 card-section1">
                 <img src="images/nicolas-roche-2014.jpg">
               </div>
@@ -143,7 +134,7 @@
         <div class="row">
           <!-- Columna 1 -->
           <div class="col-md-2 col-sm-2 col-xs-12">
-            <div class="row participantes-card text-center">
+            <div id="participante_7" class="row participantes-card text-center">
               <div class="col-md-12 card-section1">
                 <img src="images/frank-schleck-2009.jpg">
               </div>
@@ -154,7 +145,7 @@
           </div>
           <!-- Columna 2 -->
           <div class="col-md-2 col-sm-2 col-xs-12">
-            <div class="row participantes-card text-center">
+            <div id="participante_8" class="row participantes-card text-center">
               <div class="col-md-12 card-section1">
                 <img src="images/john-gadret-2011.jpg">
               </div>
@@ -165,7 +156,7 @@
           </div>
           <!-- Columna 3 -->
           <div class="col-md-2 col-sm-2 col-xs-12">
-            <div class="row participantes-card text-center">
+            <div id="participante_10" class="row participantes-card text-center">
               <div class="col-md-12 card-section1">
                 <img src="images/empty_avatar.jpg">
               </div>
@@ -176,7 +167,7 @@
           </div>
           <!-- Columna 4 -->
           <div class="col-md-2 col-sm-2 col-xs-12">
-            <div class="row participantes-card text-center">
+            <div id="participante_11" class="row participantes-card text-center">
               <div class="col-md-12 card-section1">
                 <img src="images/empty_avatar.jpg">
               </div>
@@ -187,7 +178,7 @@
           </div>
           <!-- Columna 5 -->
           <div class="col-md-2 col-sm-2 col-xs-12">
-            <div class="row participantes-card text-center">
+            <div id="participante_12" class="row participantes-card text-center">
               <div class="col-md-12 card-section1">
                 <img src="images/chris-horner-2014.jpg">
               </div>
@@ -197,7 +188,7 @@
             </div>
           </div>
           <!-- Columna 6 -->
-          <div class="col-md-2 col-sm-2 col-xs-12">
+          <div id="participante_13" class="col-md-2 col-sm-2 col-xs-12">
             <div class="row participantes-card text-center">
               <div class="col-md-12 card-section1">
                 <img src="images/natnael-tesfatsion-2024.png">
@@ -215,7 +206,7 @@
         <div class="row">
           <!-- Columna 1 -->
           <div class="col-md-2 col-sm-2 col-xs-12">
-            <div class="row participantes-card text-center">
+            <div id="participante_15" class="row participantes-card text-center">
               <div class="col-md-12 card-section1">
                 <img src="images/tejay-van-garderen-2013.jpg">
               </div>
