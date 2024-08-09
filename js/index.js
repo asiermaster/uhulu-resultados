@@ -89,6 +89,7 @@ function loadMedalleroYear(year){
     $tablePuntos.bootstrapTable('sortBy', {field: 'posicion', sortOrder: 'asc'});
     $("#medalleroTitle").html("Medallero " + year);
     $("#puntosTitle").html("Puntos " + year);
+    window.scrollTo(0, 0);
 }
 
 function goToDefaultMedallero(){
