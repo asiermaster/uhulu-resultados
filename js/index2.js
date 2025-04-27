@@ -24,6 +24,9 @@ function addEventSidebarButton() {
     toggler.addEventListener("click", function () {
         document.querySelector("#sidebar").classList.toggle("collapsed");
     });
+    if (window.innerWidth <= 768) { // typical mobile threshold
+        toggler.click();
+      }
 }
 
 function goToDefaultPage(){
