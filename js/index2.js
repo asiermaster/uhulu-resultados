@@ -1,23 +1,80 @@
 window.addEventListener('DOMContentLoaded', event => {
 
-    var $table = $('#tableMedallero');
-    var $tablePuntos =  $('#tablePuntos');
-    $(function () {
-        $table.bootstrapTable({});
-        $tablePuntos.bootstrapTable({});
-      });
+    hideEveryRow();
+
+    initTables();
 
     // Side bar menu events
     addEventSidebarButton();
     addEventCampeonatoDelMundo()
     addEventMedalleroHistorico();
     addEventMedalleroYear();
+    addEventMejorPeor();
+    addEventTop10();
 
-    goToDefaultPage()
+    goToDefaultPage();
+    
 
 });
 
+function initTables() {
+    var $table = $('#tableMedallero');
+    var $tablePuntos = $('#tablePuntos');
+    var $tableMejorPeor = $('#tableMejorPeor');
+    var $tableTop10 = $('#tableTop10');
 
+
+    $table.bootstrapTable({});
+    $tablePuntos.bootstrapTable({});
+    $tableMejorPeor.bootstrapTable({});
+    $tableMejorPeor.bootstrapTable('load', ultimo_competicion_veces);
+    $tableMejorPeor.bootstrapTable('sortBy', { field: 'posicion', sortOrder: 'asc' });
+    $tableMejorPeor.find('tbody tr').each(function (index) {
+        // Apply gold color to the first row (index 0)
+        if (index === 0) {
+            $(this).addClass('bg-gold');
+        }
+
+        // Apply silver color to the second row (index 1)
+        else if (index === 1) {
+            $(this).addClass('bg-silver');
+        }
+
+        // Apply bronze color to the third row (index 2)
+        else if (index === 2) {
+            $(this).addClass('bg-bronze');
+        }
+    });
+    $tableTop10.bootstrapTable({});
+    $tableTop10.bootstrapTable('load', top10posicionestropela);
+    $tableTop10.bootstrapTable('sortBy', { field: 'posiciontropela', sortOrder: 'asc' });
+    $tableTop10.find('tbody tr').each(function (index) {
+        // Apply gold color to the first row (index 0)
+        if (index === 0) {
+            $(this).addClass('bg-gold');
+        }
+
+        // Apply silver color to the second row (index 1)
+        else if (index === 1) {
+            $(this).addClass('bg-silver');
+        }
+
+        // Apply bronze color to the third row (index 2)
+        else if (index === 2) {
+            $(this).addClass('bg-bronze');
+        }
+    });
+}
+
+function hideEveryRow(){
+    $('#rowMedalleros').hide();
+    $('#rowMejorPeor').hide();
+    $('#rowTop10').hide();
+}
+
+function showMedalleroRow(){
+    $('#rowMedalleros').show();
+}
 
 function addEventSidebarButton() {
     const toggler = document.querySelector(".btn");
@@ -40,6 +97,8 @@ function addEventCampeonatoDelMundo(){
         sidebarMenu.addEventListener('click', event => {
             event.preventDefault();
             $(function () {
+                hideEveryRow();
+                showMedalleroRow();
                 loadCampeonatoDelMundo(sidebarMenu);
               })
             
@@ -56,10 +115,9 @@ function loadCampeonatoDelMundo(sidebarMenu){
     $tablePuntos.bootstrapTable('load', puntos_totales);
     $tablePuntos.bootstrapTable('sortBy', {field: 'posicion', sortOrder: 'asc'});
     
-    $("#medalleroTitle").html("Medallero");
+    $("#medalleroTitle").html("Medallero campeonatos del mundo");
     $("#puntosTitle").html("Puntos histórico");
 
-    $("#titlePagina").html(sidebarMenu.innerText);
 }
 
 function addEventMedalleroHistorico(){
@@ -68,6 +126,8 @@ function addEventMedalleroHistorico(){
         sidebarMealleroHist.addEventListener('click', event => {
             event.preventDefault();
             $(function () {
+                hideEveryRow();
+                showMedalleroRow();
                 loadMedalleroHistorico();
               })
             
@@ -93,6 +153,8 @@ function addEventMedalleroYear(){
             event.preventDefault();
             var idEvent = event.currentTarget.getAttribute('id');
             $(function () {
+                hideEveryRow();
+                showMedalleroRow();
                 loadMedalleroYear(idEvent.substr(idEvent.length - 4));
               })
             
@@ -113,4 +175,30 @@ function loadMedalleroYear(year){
 }
 
 
+function addEventMejorPeor(){
+    const sidebarMenu = document.body.querySelector('#mejorpeor');
+    if (sidebarMenu) {
+        sidebarMenu.addEventListener('click', event => {
+            event.preventDefault();
+            $(function () {
+                hideEveryRow();
+                $('#rowMejorPeor').show();
+              })
+            
+        });
+    }
+}
 
+function addEventTop10(){
+    const sidebarMenu = document.body.querySelector('#top10');
+    if (sidebarMenu) {
+        sidebarMenu.addEventListener('click', event => {
+            event.preventDefault();
+            $(function () {
+                hideEveryRow();
+                $('#rowTop10').show();
+              })
+            
+        });
+    }
+}

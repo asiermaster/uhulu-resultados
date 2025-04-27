@@ -153,13 +153,13 @@
                     <li class="sidebar-item">
 
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link"id="medallero_historico" >
+                            <a href="#" class="sidebar-link"id="top10" >
                                 <i class="fa-solid fa-list pe-2"></i>
                                 Top 10 posiciones 
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link"id="medallero_historico" >
+                            <a href="#" class="sidebar-link"id="mejorpeor" >
                                 <i class="fa-solid fa-list pe-2"></i>
                                 Cuanto peor mejor
                             </a>
@@ -180,12 +180,9 @@
 
 
             <main class="content px-3 py-2">
-                <div class="container-fluid">
-                    <div class="mb-3">
-                        <h3 id="titlePagina"></h3>
-                    </div>
+                <div id="mainMedalleros" class="container-fluid">
 
-                    <div class="row">
+                    <div id="rowMedalleros" class="row">
                         <!-- First half -->
                         <div class="col-lg-6">
                           <h2 id="medalleroTitle"></h2>
@@ -227,7 +224,36 @@
                             </thead>
                           </table>
                         </div>
-                      </div>
+                    </div>
+                    <div id="rowMejorPeor" class="container-fluid">
+                        <div class="col-lg-12">
+                            <h2 id="mejorPeorTitle">Cuanto peor mejor</h2>
+                            <table class="table table-striped w-auto" id="tableMejorPeor" data-search="false" data-search-align="left">
+                                <thead>
+                                    <tr>
+                                      <th data-field="posicion" data-sortable="true">Posicion</th>
+                                      <th data-field="username" data-sortable="true">Nombre</th>
+                                      <th data-field="veces_ultimo_quiniela" data-sortable="true">Veces Último</th>
+                                    </tr>
+                                  </thead>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="rowTop10" class="container-fluid">
+                        <div class="col-lg-12">
+                            <h2 id="top10Title">Top 10 posiciones tropela</h2>
+                            <table class="table table-striped w-auto" id="tableTop10" data-search="false" data-search-align="left">
+                                <thead>
+                                    <tr>
+                                      <th data-field="username" data-sortable="true">Nombre</th>
+                                      <th data-field="competicion" data-sortable="true">Competición</th>
+                                      <th data-field="year" data-sortable="true">Año</th>
+                                      <th data-field="posiciontropela" data-sortable="true">Posicion</th>
+                                    </tr>
+                                  </thead>
+                            </table>
+                        </div>
+                    </div>
 
                 </div>
             </main>
