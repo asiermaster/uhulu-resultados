@@ -173,8 +173,11 @@ function loadMedalleroYear(year){
     $table.bootstrapTable('sortBy', {field: 'posicion', sortOrder: 'asc'});
     var $tablePuntos =  $('#tablePuntos');
     $tablePuntos.bootstrapTable('load', []);
-    $tablePuntos.bootstrapTable('load', window["puntos" + year]);
-    $tablePuntos.bootstrapTable('sortBy', {field: 'posicion', sortOrder: 'asc'});
+    if ("puntos" + year in window) {
+        $tablePuntos.bootstrapTable('load', window["puntos" + year]);
+        $tablePuntos.bootstrapTable('sortBy', {field: 'posicion', sortOrder: 'asc'});
+    }
+    
     $("#medalleroTitle").html("Medallero " + year);
     $("#puntosTitle").html("Puntos " + year);
     window.scrollTo(0, 0);
