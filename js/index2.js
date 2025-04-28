@@ -109,9 +109,11 @@ function addEventCampeonatoDelMundo(){
 
 function loadCampeonatoDelMundo(sidebarMenu){
     var $table = $('#tableMedallero');
+    $table.bootstrapTable('load', []);
     $table.bootstrapTable('load', historico_clasificaciones_year);
     $table.bootstrapTable('sortBy', {field: 'posicion', sortOrder: 'asc'});
     var $tablePuntos =  $('#tablePuntos');
+    $tablePuntos.bootstrapTable('load', []);
     $tablePuntos.bootstrapTable('load', puntos_totales);
     $tablePuntos.bootstrapTable('sortBy', {field: 'posicion', sortOrder: 'asc'});
     
@@ -137,9 +139,11 @@ function addEventMedalleroHistorico(){
 
 function loadMedalleroHistorico(){
     var $table = $('#tableMedallero');
+    $table.bootstrapTable('load', []);
     $table.bootstrapTable('load', medalleroHistorico);
     $table.bootstrapTable('sortBy', {field: 'posicion', sortOrder: 'asc'});
     var $tablePuntos =  $('#tablePuntos');
+    $tablePuntos.bootstrapTable('load', []);
     $tablePuntos.bootstrapTable('load', puntos_totales);
     $tablePuntos.bootstrapTable('sortBy', {field: 'posicion', sortOrder: 'asc'});
 
@@ -164,9 +168,11 @@ function addEventMedalleroYear(){
 
 function loadMedalleroYear(year){
     var $table = $('#tableMedallero');
+    $table.bootstrapTable('load', []);
     $table.bootstrapTable('load', window["medallero" + year]);
     $table.bootstrapTable('sortBy', {field: 'posicion', sortOrder: 'asc'});
     var $tablePuntos =  $('#tablePuntos');
+    $tablePuntos.bootstrapTable('load', []);
     $tablePuntos.bootstrapTable('load', window["puntos" + year]);
     $tablePuntos.bootstrapTable('sortBy', {field: 'posicion', sortOrder: 'asc'});
     $("#medalleroTitle").html("Medallero " + year);
