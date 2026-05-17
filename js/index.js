@@ -27,7 +27,20 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     }
 
-    goToDefaultPage();
+    // Navigate to section from query param (e.g. from participantes.html), or default to campeonatos
+    var params = new URLSearchParams(window.location.search);
+    var section = params.get('section');
+    if (section) {
+        var target = document.getElementById(section);
+        if (target) {
+            target.click();
+        } else {
+            goToDefaultPage();
+        }
+        history.replaceState(null, '', window.location.pathname);
+    } else {
+        goToDefaultPage();
+    }
     
 
 });
