@@ -80,13 +80,13 @@ function setActiveSidebarLink(element) {
 }
 
 function hideEveryRow(){
-    $('#rowMedalleros').hide();
-    $('#rowMejorPeor').hide();
-    $('#rowTop10').hide();
+    $('#rowMedalleros').hide().removeClass('row-fade-in');
+    $('#rowMejorPeor').hide().removeClass('row-fade-in');
+    $('#rowTop10').hide().removeClass('row-fade-in');
 }
 
 function showMedalleroRow(){
-    $('#rowMedalleros').show();
+    $('#rowMedalleros').show().addClass('row-fade-in');
 }
 
 function addEventSidebarButton() {
@@ -208,7 +208,7 @@ function addEventMejorPeor(){
             setActiveSidebarLink(event.currentTarget);
             $(function () {
                 hideEveryRow();
-                $('#rowMejorPeor').show();
+                $('#rowMejorPeor').show().addClass('row-fade-in');
               })
             
         });
@@ -223,7 +223,7 @@ function addEventTop10(){
             setActiveSidebarLink(event.currentTarget);
             $(function () {
                 hideEveryRow();
-                $('#rowTop10').show();
+                $('#rowTop10').show().addClass('row-fade-in');
               })
             
         });
