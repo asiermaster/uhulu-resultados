@@ -14,7 +14,7 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/medalStyles.css">
-  <link rel="stylesheet" href="css/templateStyles.css">
+  <link rel="stylesheet" href="css/templateSidebar.css">
   <link rel="stylesheet" href="css/participantesStyle.css">
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.6/dist/bootstrap-table.min.css">
@@ -30,201 +30,29 @@
 </head>
 
 <body>
-  <div class="d-flex" id="wrapper">
-    <!-- Sidebar-->
-    <div class="border-end bg-white" id="sidebar-wrapper">
-      <div class="sidebar-heading border-bottom bg-light">Uhulu Bike tropela</div>
-      <div class="list-group list-group-flush"></div>
-    </div>
-    <!-- Page content wrapper-->
-    <div id="page-content-wrapper">
-      <!-- Top navigation-->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <div class="container-fluid">
-            <button class="btn btn-primary" id="sidebarToggle">Menu lateral</button>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                    <li class="nav-item active"><a class="nav-link" href="index.html">Medallero</a></li>
-                    <li class="nav-item"><a class="nav-link" href="participantes.html">Participantes</a></li>
-                </ul>
-            </div>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <script src="js/sidebar.js"></script>
+        </aside>
+        <div id="sidebarOverlay"></div>
+        <!-- Main Component -->
+        <div class="main">
+            <nav class="navbar navbar-expand px-3 border-bottom">
+                <button class="btn btn-navbar-toggle" type="button">
+                    <svg viewBox="0 0 30 30" width="20" height="20" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round">
+                        <path d="M4 7h22M4 15h22M4 23h22"/>
+                    </svg>
+                </button>
+            </nav>
+            <main class="content px-3 py-2">
+                <div id="participantProfile"></div>
+            </main>
         </div>
-      </nav>
-      <!-- Page content-->
-      <div class="container-fluid">
-        <h2 id="resultadosTitle">Resultados</h2>
-        <div class="row result-section">
-          <canvas id="resultChart"></canvas>
-        </div>
-        <!-- Avatares participantes -->
-        <h2>Participantes</h2>
-        <!-- Fila 1 -->
-        <div class="row">
-          <!-- Columna 1 -->
-          <div class="col-md-2 col-sm-2 col-12">
-            <div id="participante_1" class="row participantes-card text-center">
-              <div class="col-md-12 card-section1">
-                <img src="images/julian-alaphilippe-2020.jpeg">
-              </div>
-              <div class="col-md-12 card-section2 pb-3">
-                <p>berasa</p>
-              </div>
-            </div>
-          </div>
-          <!-- Columna 2 -->
-          <div class="col-md-2 col-sm-2 col-12">
-            <div id="participante_2" class="row participantes-card text-center">
-              <div class="col-md-12 card-section1">
-                <img src="images/jerome-pineau-2009.jpg">
-              </div>
-              <div class="col-md-12 card-section2 pb-3">
-                <p>manaria</p>
-              </div>
-            </div>
-          </div>
-          <!-- Columna 3 -->
-          <div class="col-md-2 col-sm-2 col-12">
-            <div id="participante_3" class="row participantes-card text-center">
-              <div class="col-md-12 card-section1">
-                <img src="images/empty_avatar.jpg">
-              </div>
-              <div class="col-md-12 card-section2 pb-3">
-                <p>OIER19</p>
-              </div>
-            </div>
-          </div>
-          <!-- Columna 4 -->
-          <div class="col-md-2 col-sm-2 col-12">
-            <div id="participante_4" class="row participantes-card text-center">
-              <div class="col-md-12 card-section1">
-                <img src="images/kevin_reza_2013.jpg">
-              </div>
-              <div class="col-md-12 card-section2 pb-3">
-                <p>baxxter</p>
-              </div>
-            </div>
-          </div>
-          <!-- Columna 5 -->
-          <div class="col-md-2 col-sm-2 col-12">
-            <div id="participante_5" class="row participantes-card text-center">
-              <div class="col-md-12 card-section1">
-                <img src="images/empty_avatar.jpg">
-              </div>
-              <div class="col-md-12 card-section2 pb-3">
-                <p>galdi</p>
-              </div>
-            </div>
-          </div>
-          <!-- Columna 6 -->
-          <div class="col-md-2 col-sm-2 col-12">
-            <div id="participante_6" class="row participantes-card text-center">
-              <div class="col-md-12 card-section1">
-                <img src="images/nicolas-roche-2014.jpg">
-              </div>
-              <div class="col-md-12 card-section2 pb-3">
-                <p>asiermaster</p>
-              </div>
-            </div>
-          </div>
-          
-
-        </div>
-        <!-- End Fila 1 -->
-        <!-- Fila 2 -->
-        <div class="row">
-          <!-- Columna 1 -->
-          <div class="col-md-2 col-sm-2 col-12">
-            <div id="participante_7" class="row participantes-card text-center">
-              <div class="col-md-12 card-section1">
-                <img src="images/frank-schleck-2009.jpg">
-              </div>
-              <div class="col-md-12 card-section2 pb-3">
-                <p>runspeltinskin</p>
-              </div>
-            </div>
-          </div>
-          <!-- Columna 2 -->
-          <div class="col-md-2 col-sm-2 col-12">
-            <div id="participante_8" class="row participantes-card text-center">
-              <div class="col-md-12 card-section1">
-                <img src="images/john-gadret-2011.jpg">
-              </div>
-              <div class="col-md-12 card-section2 pb-3">
-                <p>Jonel</p>
-              </div>
-            </div>
-          </div>
-          <!-- Columna 3 -->
-          <div class="col-md-2 col-sm-2 col-12">
-            <div id="participante_10" class="row participantes-card text-center">
-              <div class="col-md-12 card-section1">
-                <img src="images/empty_avatar.jpg">
-              </div>
-              <div class="col-md-12 card-section2 pb-3">
-                <p>gorkaolaso</p>
-              </div>
-            </div>
-          </div>
-          <!-- Columna 4 -->
-          <div class="col-md-2 col-sm-2 col-12">
-            <div id="participante_11" class="row participantes-card text-center">
-              <div class="col-md-12 card-section1">
-                <img src="images/empty_avatar.jpg">
-              </div>
-              <div class="col-md-12 card-section2 pb-3">
-                <p>zabalaundi</p>
-              </div>
-            </div>
-          </div>
-          <!-- Columna 5 -->
-          <div class="col-md-2 col-sm-2 col-12">
-            <div id="participante_12" class="row participantes-card text-center">
-              <div class="col-md-12 card-section1">
-                <img src="images/chris-horner-2014.jpg">
-              </div>
-              <div class="col-md-12 card-section2 pb-3">
-                <p>gurrutxaga</p>
-              </div>
-            </div>
-          </div>
-          <!-- Columna 6 -->
-          <div id="participante_13" class="col-md-2 col-sm-2 col-12">
-            <div class="row participantes-card text-center">
-              <div class="col-md-12 card-section1">
-                <img src="images/natnael-tesfatsion-2024.png">
-              </div>
-              <div class="col-md-12 card-section2 pb-3">
-                <p>castlefont</p>
-              </div>
-            </div>
-          </div>
-          
-
-        </div>
-        <!-- End Fila 2 -->
-        <!-- Fila 3 -->
-        <div class="row">
-          <!-- Columna 1 -->
-          <div class="col-md-2 col-sm-2 col-12">
-            <div id="participante_15" class="row participantes-card text-center">
-              <div class="col-md-12 card-section1">
-                <img src="images/tejay-van-garderen-2013.jpg">
-              </div>
-              <div class="col-md-12 card-section2 pb-3">
-                <p>ELORRI</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
 
-  </div>
-  
-  <script src="js/participantes.js"></script> 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/participantes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </body>
 
