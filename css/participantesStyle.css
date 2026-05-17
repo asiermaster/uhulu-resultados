@@ -1,39 +1,181 @@
-.result-section{
-    height: 500px;
-    padding: 10px 0px 10px 0px;
+/* ===========================
+   Participant Profile
+   =========================== */
+
+#participantProfile {
+    padding: 24px 32px;
 }
 
-@media (max-width: 768px) {
-    .result-section{
-        height: 300px;
-    }
+/* Header */
+
+.profile-header {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    margin-bottom: 28px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e9ecef;
 }
 
-.participantes-card{
-    border-radius: 2px;
-    border-top: 6px solid var(--color-primary-light, #2ecc71);
-    border-bottom: 6px solid var(--color-primary-light, #2ecc71);
-    margin: 0px;
-    background-color: #FFFFFF;
-    margin-bottom: 20px;
-    box-shadow: 5px 10px 8px #888888;
-    transition: transform 0.2s ease;
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 30%;
+    border: 3px solid var(--color-primary-light, #2ecc71);
+    flex-shrink: 0;
+}
+
+.profile-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.profile-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    color: var(--color-text, #2c3e50);
+}
+
+.profile-quick-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.stat-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    background: #f0f0f0;
+    color: var(--color-text, #2c3e50);
+    white-space: nowrap;
+}
+
+.stat-badge.medal-badge {
+    background: linear-gradient(135deg, #fff8e1, #fff3cd);
+    border: 1px solid #ffd700;
+}
+
+/* Sections */
+
+.profile-section {
+    margin-bottom: 28px;
+}
+
+.profile-section h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    color: var(--color-text, #2c3e50);
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.result-section {
+    height: 350px;
+    padding: 10px 0;
+}
+
+/* History table */
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.history-table thead {
+    background: var(--sidebar-bg, #1a2a3a);
+    color: #fff;
+}
+
+.history-table th {
+    padding: 10px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.history-table td {
+    padding: 8px 16px;
+    border-bottom: 1px solid #eee;
+    color: var(--color-text, #2c3e50);
+}
+
+.history-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.history-table tbody tr.medal-1 {
+    background: rgba(255, 215, 0, 0.08);
+}
+
+.history-table tbody tr.medal-2 {
+    background: rgba(192, 192, 192, 0.08);
+}
+
+.history-table tbody tr.medal-3 {
+    background: rgba(205, 127, 50, 0.08);
+}
+
+/* ===========================
+   Participant list in sidebar
+   =========================== */
+
+.participant-link {
     cursor: pointer;
 }
 
-.participantes-card:hover {
-    transform: scale(1.02);
+/* ===========================
+   Responsive
+   =========================== */
+
+@media (max-width: 991.98px) {
+    #participantProfile {
+        padding: 20px;
+    }
+    .profile-photo {
+        width: 90px;
+        height: 90px;
+    }
+    .profile-name {
+        font-size: 1.25rem;
+    }
 }
-.card-section1{
-    padding: 10px 0px 10px 0px;
-}
-.card-section1 img{
-    border-radius: 20%;
-    height: 100px;
-    width: 100px;
-}
-.card-section2 p{
-    font-weight: bold;
-    color: var(--color-primary, #1a3a2a);
-    letter-spacing: 1px;
+
+@media (max-width: 767.98px) {
+    #participantProfile {
+        padding: 16px;
+    }
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .profile-quick-stats {
+        justify-content: center;
+    }
+    .profile-photo {
+        width: 80px;
+        height: 80px;
+    }
+    .result-section {
+        height: 250px;
+    }
+    .history-table {
+        font-size: 0.8rem;
+    }
+    .history-table th,
+    .history-table td {
+        padding: 6px 10px;
+    }
 }

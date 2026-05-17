@@ -39,7 +39,14 @@
     html += '</ul></li>';
 
     html += '<li class="sidebar-header">Estadísticas</li>';
-    html += link('participantes', '🚴', 'Participantes');
+    if (isParticipantes) {
+        html += '<li class="sidebar-item">';
+        html += '<a href="#" class="sidebar-link active" data-bs-toggle="collapse" data-bs-target="#participantList" aria-expanded="true">🚴 Participantes</a>';
+        html += '<ul id="participantList" class="sidebar-dropdown list-unstyled collapse show"></ul>';
+        html += '</li>';
+    } else {
+        html += link('participantes', '🚴', 'Participantes');
+    }
     html += link('top10', '📊', 'Top 10 posiciones');
     html += link('mejorpeor', '😂', 'Cuanto peor mejor');
 
