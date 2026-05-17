@@ -3,6 +3,12 @@
     padding: 10px 0px 10px 0px;
 }
 
+@media (max-width: 768px) {
+    .result-section{
+        height: 300px;
+    }
+}
+
 .participantes-card{
     border-radius: 2px;
     border-top: 6px solid #5DDDD3;

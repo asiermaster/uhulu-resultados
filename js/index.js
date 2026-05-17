@@ -18,6 +18,15 @@ window.addEventListener('DOMContentLoaded', event => {
     addEventMejorPeor();
     addEventTop10();
 
+    // Close sidebar on mobile after selecting a section
+    if (window.innerWidth <= 768) {
+        document.querySelectorAll('.sidebar-link:not([data-bs-toggle])').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.querySelector("#sidebar").classList.add("collapsed");
+            });
+        });
+    }
+
     goToDefaultPage();
     
 
@@ -91,12 +100,15 @@ function showMedalleroRow(){
 
 function addEventSidebarButton() {
     const toggler = document.querySelector(".btn");
+    const sidebar = document.querySelector("#sidebar");
+
     toggler.addEventListener("click", function () {
-        document.querySelector("#sidebar").classList.toggle("collapsed");
+        sidebar.classList.toggle("collapsed");
     });
-    if (window.innerWidth <= 768) { // typical mobile threshold
+
+    if (window.innerWidth <= 768) {
         toggler.click();
-      }
+    }
 }
 
 function goToDefaultPage(){
