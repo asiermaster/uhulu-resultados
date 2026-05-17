@@ -1,11 +1,62 @@
+.medal-icon {
+    font-size: 1.3rem;
+    display: inline-block;
+}
+
+.badge-medal {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0.25em 0.6em;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 0.25rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.badge-medal.bg-gold {
+    background-color: #ffd700;
+    color: #333;
+}
+
+.badge-medal.bg-silver {
+    background-color: #e8e8e8;
+    color: #333;
+}
+
+.badge-medal.bg-bronze {
+    background-color: #cd7f32;
+    color: #fff;
+}
+
 .bg-gold {
-    background-color: rgb(255,215,0, .5)
-  }
+    background-color: rgba(255, 215, 0, 0.4);
+}
 
 .bg-silver {
-    background-color: rgb(192,192,192, .5)
-  }
+    background-color: rgba(192, 192, 192, 0.4);
+}
 
 .bg-bronze {
-    background-color: rgb(205, 127, 50, .5)
-  }
+    background-color: rgba(205, 127, 50, 0.4);
+}
+
+.table > :not(caption) > * > * {
+    vertical-align: middle;
+}
+
+.table thead th {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background-color: #2c3e50;
+    color: #ffffff;
+    border-color: #34495e;
+}
+
+.table-hover tbody tr:hover {
+    box-shadow: inset 0 0 0 9999px rgba(46, 204, 113, 0.05);
+    cursor: default;
+}

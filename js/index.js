@@ -1,3 +1,9 @@
+function medallasFormatter(value, row, index, field) {
+    var iconos = { oro: '\u{1F947}', plata: '\u{1F948}', bronce: '\u{1F949}' };
+    var label = { oro: 'Oro', plata: 'Plata', bronce: 'Bronce' };
+    return '<span class="badge-medal ' + (field === 'oro' ? 'bg-gold' : field === 'plata' ? 'bg-silver' : 'bg-bronze') + '"><span class="medal-icon">' + (iconos[field] || '') + '</span> ' + value + '</span>';
+}
+
 window.addEventListener('DOMContentLoaded', event => {
 
     hideEveryRow();
@@ -66,6 +72,13 @@ function initTables() {
     });
 }
 
+function setActiveSidebarLink(element) {
+    document.querySelectorAll('.sidebar-link').forEach(function(link) {
+        link.classList.remove('active');
+    });
+    element.classList.add('active');
+}
+
 function hideEveryRow(){
     $('#rowMedalleros').hide();
     $('#rowMejorPeor').hide();
@@ -96,6 +109,7 @@ function addEventCampeonatoDelMundo(){
     if (sidebarMenu) {
         sidebarMenu.addEventListener('click', event => {
             event.preventDefault();
+            setActiveSidebarLink(event.currentTarget);
             $(function () {
                 hideEveryRow();
                 showMedalleroRow();
@@ -127,6 +141,7 @@ function addEventMedalleroHistorico(){
     if (sidebarMealleroHist) {
         sidebarMealleroHist.addEventListener('click', event => {
             event.preventDefault();
+            setActiveSidebarLink(event.currentTarget);
             $(function () {
                 hideEveryRow();
                 showMedalleroRow();
@@ -155,6 +170,7 @@ function addEventMedalleroYear(){
     document.body.querySelectorAll("[id^='medallero_20']").forEach(function (sidebarMealleroYear) {
         sidebarMealleroYear.addEventListener('click', event => {
             event.preventDefault();
+            setActiveSidebarLink(event.currentTarget);
             var idEvent = event.currentTarget.getAttribute('id');
             $(function () {
                 hideEveryRow();
@@ -189,6 +205,7 @@ function addEventMejorPeor(){
     if (sidebarMenu) {
         sidebarMenu.addEventListener('click', event => {
             event.preventDefault();
+            setActiveSidebarLink(event.currentTarget);
             $(function () {
                 hideEveryRow();
                 $('#rowMejorPeor').show();
@@ -203,6 +220,7 @@ function addEventTop10(){
     if (sidebarMenu) {
         sidebarMenu.addEventListener('click', event => {
             event.preventDefault();
+            setActiveSidebarLink(event.currentTarget);
             $(function () {
                 hideEveryRow();
                 $('#rowTop10').show();

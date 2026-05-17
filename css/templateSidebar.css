@@ -1,4 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
+
+:root {
+    --color-primary: #1a3a2a;
+    --color-primary-light: #2ecc71;
+    --color-secondary: #1a2a3a;
+    --color-accent: #e67e22;
+    --color-bg: #f4f6f9;
+    --color-surface: #ffffff;
+    --color-text: #2c3e50;
+    --color-text-light: #7f8c8d;
+    --color-gold: #ffd700;
+    --color-silver: #c0c0c0;
+    --color-bronze: #cd7f32;
+    --sidebar-bg: #1a2a3a;
+    --sidebar-text: #ecf0f1;
+    --sidebar-hover: rgba(255, 255, 255, 0.08);
+    --sidebar-active-border: #e67e22;
+}
 
 *,
 ::after,
@@ -9,10 +28,15 @@
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    background-color: #ffffff;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: cover;
+    background-color: var(--color-bg);
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232c3e50' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat;
+}
+
+h1, h2, h3, .sidebar-logo a, .sidebar-header {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 h3 {
@@ -41,10 +65,24 @@ li {
 #sidebar {
     max-width: 264px;
     min-width: 264px;
-    background-color: #6987a1;
+    background-color: var(--sidebar-bg);
     transition: all 0.35s ease-in-out;
     box-shadow: 0 0 35px 0 rgba(49, 57, 66, 0.5);
     z-index: 1111;
+}
+
+.sidebar-nav {
+    max-height: calc(100vh - 150px);
+    overflow-y: auto;
+}
+
+.sidebar-nav::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
 }
 
 /* Sidebar collapse */
@@ -60,6 +98,32 @@ li {
     width: 100%;
     overflow: hidden;
     transition: all 0.35s ease-in-out;
+}
+
+.main .navbar {
+    background-color: var(--sidebar-bg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.btn-navbar-toggle {
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.btn-navbar-toggle svg {
+    display: block;
+}
+
+.btn-navbar-toggle:hover {
+    background-color: var(--sidebar-hover);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 .sidebar-logo {
@@ -88,6 +152,22 @@ a.sidebar-link {
     position: relative;
     display: block;
     font-size: 1rem;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+a.sidebar-link:hover {
+    background-color: var(--sidebar-hover);
+    transform: translateX(4px);
+    color: #ffffff;
+    border-left-color: var(--sidebar-active-border);
+}
+
+a.sidebar-link.active {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-left: 3px solid var(--sidebar-active-border);
+    color: #ffffff;
+    font-weight: 500;
 }
 
 .sidebar-link[data-bs-toggle="collapse"]::after {
