@@ -45,10 +45,10 @@ function renderParticipantList() {
     }
 }
 
-function computeStats(id) {
+function computeStats(nombre) {
     var rows = [];
     for (var i = 0; i < clasificacionYear.length; i++) {
-        if (clasificacionYear[i].participante_id == id) {
+        if (clasificacionYear[i].username == nombre && clasificacionYear[i].posicion !== null) {
             rows.push(clasificacionYear[i]);
         }
     }
@@ -81,13 +81,13 @@ function computeStats(id) {
 
     var yearSet = {};
     for (var m = 0; m < rows.length; m++) {
-        yearSet[rows[m].year_id] = true;
+        yearSet[rows[m].year] = true;
     }
     var years = Object.keys(yearSet).map(Number).sort(function (a, b) { return b - a; });
 
     var historial = [];
     for (var n = 0; n < rows.length; n++) {
-        historial.push({ year: rows[n].year_id, pos: rows[n].posicion });
+        historial.push({ year: rows[n].year, pos: rows[n].posicion });
     }
     historial.sort(function (a, b) { return b.year - a.year; });
 
@@ -119,9 +119,9 @@ function showParticipant(id) {
     }
     if (!participante) return;
 
-    var stats = computeStats(id);
+    var stats = computeStats(participante.nombre);
     renderProfile(participante, stats);
-    addChart(id);
+    addChart(participante.nombre);
 }
 
 function renderProfile(participante, stats) {
@@ -172,13 +172,13 @@ function renderProfile(participante, stats) {
     container.innerHTML = html;
 }
 
-function addChart(id) {
+function addChart(nombre) {
     var ctx = document.getElementById('resultChart');
     if (!ctx) return;
 
     var clasificacionesParticipante = [];
     for (var i = 0; i < clasificacionYear.length; i++) {
-        if (clasificacionYear[i].participante_id == id) {
+        if (clasificacionYear[i].username == nombre && clasificacionYear[i].posicion !== null) {
             clasificacionesParticipante.push(clasificacionYear[i]);
         }
     }
@@ -189,12 +189,12 @@ function addChart(id) {
 
     if (clasificacionesParticipante.length === 0) return;
 
-    clasificacionesParticipante.sort(function (a, b) { return a.year_id - b.year_id; });
+    clasificacionesParticipante.sort(function (a, b) { return a.year - b.year; });
 
     graficoResultados = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: clasificacionesParticipante.map(function (cp) { return cp.year_id; }),
+            labels: clasificacionesParticipante.map(function (cp) { return cp.year; }),
             datasets: [{
                 label: 'Posici\u00F3n',
                 data: clasificacionesParticipante.map(function (cp) { return cp.posicion; }),

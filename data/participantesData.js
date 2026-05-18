@@ -1,8 +1,1608 @@
-var clasificacionYear= [{"participante_id":1,"year_id":2007,"posicion":1},{"participante_id":2,"year_id":2007,"posicion":2},{"participante_id":3,"year_id":2007,"posicion":3},{"participante_id":6,"year_id":2008,"posicion":1},{"participante_id":1,"year_id":2008,"posicion":2},{"participante_id":3,"year_id":2008,"posicion":3},{"participante_id":2,"year_id":2008,"posicion":4},{"participante_id":4,"year_id":2008,"posicion":5},{"participante_id":7,"year_id":2008,"posicion":6},{"participante_id":5,"year_id":2008,"posicion":7},{"participante_id":1,"year_id":2009,"posicion":1},{"participante_id":6,"year_id":2009,"posicion":2},{"participante_id":3,"year_id":2009,"posicion":3},{"participante_id":2,"year_id":2009,"posicion":4},{"participante_id":5,"year_id":2009,"posicion":5},{"participante_id":4,"year_id":2009,"posicion":6},{"participante_id":7,"year_id":2009,"posicion":7},{"participante_id":8,"year_id":2009,"posicion":8},{"participante_id":9,"year_id":2009,"posicion":9},{"participante_id":10,"year_id":2009,"posicion":10},{"participante_id":11,"year_id":2009,"posicion":11},{"participante_id":12,"year_id":2009,"posicion":12},{"participante_id":13,"year_id":2009,"posicion":13},{"participante_id":1,"year_id":2010,"posicion":1},{"participante_id":5,"year_id":2010,"posicion":2},{"participante_id":6,"year_id":2010,"posicion":3},{"participante_id":3,"year_id":2010,"posicion":4},{"participante_id":10,"year_id":2010,"posicion":5},{"participante_id":12,"year_id":2010,"posicion":6},{"participante_id":9,"year_id":2010,"posicion":7},{"participante_id":4,"year_id":2010,"posicion":8},{"participante_id":11,"year_id":2010,"posicion":9},{"participante_id":7,"year_id":2010,"posicion":10},{"participante_id":2,"year_id":2010,"posicion":11},{"participante_id":8,"year_id":2010,"posicion":12},{"participante_id":9,"year_id":2011,"posicion":1},{"participante_id":10,"year_id":2011,"posicion":2},{"participante_id":6,"year_id":2011,"posicion":3},{"participante_id":1,"year_id":2011,"posicion":4},{"participante_id":3,"year_id":2011,"posicion":5},{"participante_id":12,"year_id":2011,"posicion":6},{"participante_id":11,"year_id":2011,"posicion":7},{"participante_id":5,"year_id":2011,"posicion":8},{"participante_id":4,"year_id":2011,"posicion":9},{"participante_id":7,"year_id":2011,"posicion":10},{"participante_id":2,"year_id":2011,"posicion":11},{"participante_id":8,"year_id":2011,"posicion":12},{"participante_id":1,"year_id":2012,"posicion":1},{"participante_id":3,"year_id":2012,"posicion":2},{"participante_id":6,"year_id":2012,"posicion":3},{"participante_id":11,"year_id":2012,"posicion":4},{"participante_id":9,"year_id":2012,"posicion":5},{"participante_id":5,"year_id":2012,"posicion":6},{"participante_id":8,"year_id":2012,"posicion":7},{"participante_id":2,"year_id":2012,"posicion":8},{"participante_id":12,"year_id":2012,"posicion":9},{"participante_id":7,"year_id":2012,"posicion":10},{"participante_id":10,"year_id":2012,"posicion":11},{"participante_id":4,"year_id":2012,"posicion":12},{"participante_id":10,"year_id":2013,"posicion":1},{"participante_id":6,"year_id":2013,"posicion":2},{"participante_id":2,"year_id":2013,"posicion":3},{"participante_id":1,"year_id":2013,"posicion":4},{"participante_id":12,"year_id":2013,"posicion":5},{"participante_id":5,"year_id":2013,"posicion":6},{"participante_id":8,"year_id":2013,"posicion":7},{"participante_id":3,"year_id":2013,"posicion":8},{"participante_id":7,"year_id":2013,"posicion":9},{"participante_id":9,"year_id":2013,"posicion":10},{"participante_id":11,"year_id":2013,"posicion":11},{"participante_id":4,"year_id":2013,"posicion":12},{"participante_id":6,"year_id":2014,"posicion":1},{"participante_id":12,"year_id":2014,"posicion":2},{"participante_id":10,"year_id":2014,"posicion":3},{"participante_id":8,"year_id":2014,"posicion":4},{"participante_id":3,"year_id":2014,"posicion":5},{"participante_id":5,"year_id":2014,"posicion":6},{"participante_id":1,"year_id":2014,"posicion":7},{"participante_id":7,"year_id":2014,"posicion":8},{"participante_id":9,"year_id":2014,"posicion":9},{"participante_id":11,"year_id":2014,"posicion":10},{"participante_id":2,"year_id":2014,"posicion":11},{"participante_id":12,"year_id":2015,"posicion":2},{"participante_id":10,"year_id":2015,"posicion":3},{"participante_id":3,"year_id":2015,"posicion":4},{"participante_id":5,"year_id":2015,"posicion":5},{"participante_id":2,"year_id":2015,"posicion":7},{"participante_id":8,"year_id":2015,"posicion":8},{"participante_id":7,"year_id":2015,"posicion":9},{"participante_id":9,"year_id":2015,"posicion":10},{"participante_id":14,"year_id":2015,"posicion":11},{"participante_id":4,"year_id":2015,"posicion":12},{"participante_id":6,"year_id":2015,"posicion":1},{"participante_id":1,"year_id":2015,"posicion":6},{"participante_id":12,"year_id":2016,"posicion":1},{"participante_id":6,"year_id":2016,"posicion":2},{"participante_id":9,"year_id":2016,"posicion":3},{"participante_id":1,"year_id":2016,"posicion":4},{"participante_id":2,"year_id":2016,"posicion":5},{"participante_id":10,"year_id":2016,"posicion":6},{"participante_id":3,"year_id":2016,"posicion":7},{"participante_id":5,"year_id":2016,"posicion":8},{"participante_id":7,"year_id":2016,"posicion":9},{"participante_id":8,"year_id":2016,"posicion":10},{"participante_id":12,"year_id":2017,"posicion":1},{"participante_id":1,"year_id":2017,"posicion":2},{"participante_id":3,"year_id":2017,"posicion":3},{"participante_id":6,"year_id":2017,"posicion":4},{"participante_id":8,"year_id":2017,"posicion":5},{"participante_id":7,"year_id":2017,"posicion":6},{"participante_id":2,"year_id":2017,"posicion":7},{"participante_id":5,"year_id":2017,"posicion":8},{"participante_id":9,"year_id":2017,"posicion":9},{"participante_id":15,"year_id":2017,"posicion":10},{"participante_id":10,"year_id":2017,"posicion":11},{"participante_id":6,"year_id":2018,"posicion":1},{"participante_id":12,"year_id":2018,"posicion":2},{"participante_id":1,"year_id":2018,"posicion":3},{"participante_id":3,"year_id":2018,"posicion":4},{"participante_id":7,"year_id":2018,"posicion":5},{"participante_id":8,"year_id":2018,"posicion":6},{"participante_id":2,"year_id":2018,"posicion":7},{"participante_id":9,"year_id":2018,"posicion":8},{"participante_id":15,"year_id":2018,"posicion":9},{"participante_id":10,"year_id":2018,"posicion":10},{"participante_id":6,"year_id":2019,"posicion":1},{"participante_id":3,"year_id":2019,"posicion":2},{"participante_id":12,"year_id":2019,"posicion":3},{"participante_id":2,"year_id":2019,"posicion":4},{"participante_id":1,"year_id":2019,"posicion":5},{"participante_id":8,"year_id":2019,"posicion":6},{"participante_id":7,"year_id":2019,"posicion":7},{"participante_id":5,"year_id":2019,"posicion":8},{"participante_id":9,"year_id":2019,"posicion":9},{"participante_id":10,"year_id":2019,"posicion":10},{"participante_id":15,"year_id":2019,"posicion":11},{"participante_id":6,"year_id":2020,"posicion":1},{"participante_id":12,"year_id":2020,"posicion":2},{"participante_id":3,"year_id":2020,"posicion":3},{"participante_id":10,"year_id":2020,"posicion":4},{"participante_id":1,"year_id":2020,"posicion":5},{"participante_id":8,"year_id":2020,"posicion":6},{"participante_id":7,"year_id":2020,"posicion":7},{"participante_id":5,"year_id":2020,"posicion":8},{"participante_id":2,"year_id":2020,"posicion":9},{"participante_id":6,"year_id":2021,"posicion":1},{"participante_id":5,"year_id":2021,"posicion":2},{"participante_id":3,"year_id":2021,"posicion":3},{"participante_id":12,"year_id":2021,"posicion":4},{"participante_id":2,"year_id":2021,"posicion":5},{"participante_id":7,"year_id":2021,"posicion":6},{"participante_id":1,"year_id":2021,"posicion":7},{"participante_id":8,"year_id":2021,"posicion":8},{"participante_id":6,"year_id":2022,"posicion":1},{"participante_id":12,"year_id":2022,"posicion":2},{"participante_id":5,"year_id":2022,"posicion":3},{"participante_id":3,"year_id":2022,"posicion":4},{"participante_id":2,"year_id":2022,"posicion":5},{"participante_id":7,"year_id":2022,"posicion":6},{"participante_id":8,"year_id":2022,"posicion":7},{"participante_id":1,"year_id":2022,"posicion":8},{"participante_id":11,"year_id":2022,"posicion":9},{"participante_id":15,"year_id":2022,"posicion":10},{"participante_id":6,"year_id":2023,"posicion":1},{"participante_id":12,"year_id":2023,"posicion":2},{"participante_id":3,"year_id":2023,"posicion":3},{"participante_id":5,"year_id":2023,"posicion":4},{"participante_id":8,"year_id":2023,"posicion":5},{"participante_id":7,"year_id":2023,"posicion":6},{"participante_id":2,"year_id":2023,"posicion":7},{"participante_id":1,"year_id":2023,"posicion":8},{"participante_id":11,"year_id":2023,"posicion":9}]
-    
+var clasificacionYear = [
+    {
+        "year": 2007,
+        "username": "berasa",
+        "posicion": 1
+    },
+    {
+        "year": 2007,
+        "username": "manaria",
+        "posicion": 2
+    },
+    {
+        "year": 2007,
+        "username": "OIER19",
+        "posicion": 3
+    },
+    {
+        "year": 2007,
+        "username": "baxxter",
+        "posicion": null
+    },
+    {
+        "year": 2007,
+        "username": "galdi",
+        "posicion": null
+    },
+    {
+        "year": 2007,
+        "username": "asiermaster",
+        "posicion": null
+    },
+    {
+        "year": 2007,
+        "username": "runspeltinskin",
+        "posicion": null
+    },
+    {
+        "year": 2007,
+        "username": "Jonel",
+        "posicion": null
+    },
+    {
+        "year": 2007,
+        "username": "JonBaraja",
+        "posicion": null
+    },
+    {
+        "year": 2007,
+        "username": "korroskada",
+        "posicion": null
+    },
+    {
+        "year": 2007,
+        "username": "ELORRI",
+        "posicion": null
+    },
+    {
+        "year": 2007,
+        "username": "gorkaolaso",
+        "posicion": null
+    },
+    {
+        "year": 2007,
+        "username": "zabalaundi",
+        "posicion": null
+    },
+    {
+        "year": 2007,
+        "username": "castlefont",
+        "posicion": null
+    },
+    {
+        "year": 2007,
+        "username": "aberasa",
+        "posicion": null
+    },
+    {
+        "year": 2007,
+        "username": "Gurru",
+        "posicion": null
+    },
+    {
+        "year": 2008,
+        "username": "asiermaster",
+        "posicion": 1
+    },
+    {
+        "year": 2008,
+        "username": "berasa",
+        "posicion": 2
+    },
+    {
+        "year": 2008,
+        "username": "OIER19",
+        "posicion": 3
+    },
+    {
+        "year": 2008,
+        "username": "manaria",
+        "posicion": 4
+    },
+    {
+        "year": 2008,
+        "username": "baxxter",
+        "posicion": 5
+    },
+    {
+        "year": 2008,
+        "username": "runspeltinskin",
+        "posicion": 6
+    },
+    {
+        "year": 2008,
+        "username": "galdi",
+        "posicion": 7
+    },
+    {
+        "year": 2008,
+        "username": "Jonel",
+        "posicion": null
+    },
+    {
+        "year": 2008,
+        "username": "JonBaraja",
+        "posicion": null
+    },
+    {
+        "year": 2008,
+        "username": "korroskada",
+        "posicion": null
+    },
+    {
+        "year": 2008,
+        "username": "ELORRI",
+        "posicion": null
+    },
+    {
+        "year": 2008,
+        "username": "gorkaolaso",
+        "posicion": null
+    },
+    {
+        "year": 2008,
+        "username": "zabalaundi",
+        "posicion": null
+    },
+    {
+        "year": 2008,
+        "username": "castlefont",
+        "posicion": null
+    },
+    {
+        "year": 2008,
+        "username": "aberasa",
+        "posicion": null
+    },
+    {
+        "year": 2008,
+        "username": "Gurru",
+        "posicion": null
+    },
+    {
+        "year": 2009,
+        "username": "berasa",
+        "posicion": 1
+    },
+    {
+        "year": 2009,
+        "username": "asiermaster",
+        "posicion": 2
+    },
+    {
+        "year": 2009,
+        "username": "OIER19",
+        "posicion": 3
+    },
+    {
+        "year": 2009,
+        "username": "manaria",
+        "posicion": 4
+    },
+    {
+        "year": 2009,
+        "username": "galdi",
+        "posicion": 5
+    },
+    {
+        "year": 2009,
+        "username": "baxxter",
+        "posicion": 6
+    },
+    {
+        "year": 2009,
+        "username": "runspeltinskin",
+        "posicion": 7
+    },
+    {
+        "year": 2009,
+        "username": "Jonel",
+        "posicion": 8
+    },
+    {
+        "year": 2009,
+        "username": "JonBaraja",
+        "posicion": 9
+    },
+    {
+        "year": 2009,
+        "username": "gorkaolaso",
+        "posicion": 10
+    },
+    {
+        "year": 2009,
+        "username": "zabalaundi",
+        "posicion": 11
+    },
+    {
+        "year": 2009,
+        "username": "Gurru",
+        "posicion": 12
+    },
+    {
+        "year": 2009,
+        "username": "castlefont",
+        "posicion": 13
+    },
+    {
+        "year": 2009,
+        "username": "korroskada",
+        "posicion": null
+    },
+    {
+        "year": 2009,
+        "username": "ELORRI",
+        "posicion": null
+    },
+    {
+        "year": 2009,
+        "username": "aberasa",
+        "posicion": null
+    },
+    {
+        "year": 2010,
+        "username": "berasa",
+        "posicion": 1
+    },
+    {
+        "year": 2010,
+        "username": "galdi",
+        "posicion": 2
+    },
+    {
+        "year": 2010,
+        "username": "asiermaster",
+        "posicion": 3
+    },
+    {
+        "year": 2010,
+        "username": "OIER19",
+        "posicion": 4
+    },
+    {
+        "year": 2010,
+        "username": "gorkaolaso",
+        "posicion": 5
+    },
+    {
+        "year": 2010,
+        "username": "Gurru",
+        "posicion": 6
+    },
+    {
+        "year": 2010,
+        "username": "JonBaraja",
+        "posicion": 7
+    },
+    {
+        "year": 2010,
+        "username": "baxxter",
+        "posicion": 8
+    },
+    {
+        "year": 2010,
+        "username": "zabalaundi",
+        "posicion": 9
+    },
+    {
+        "year": 2010,
+        "username": "runspeltinskin",
+        "posicion": 10
+    },
+    {
+        "year": 2010,
+        "username": "manaria",
+        "posicion": 11
+    },
+    {
+        "year": 2010,
+        "username": "Jonel",
+        "posicion": 12
+    },
+    {
+        "year": 2010,
+        "username": "ELORRI",
+        "posicion": null
+    },
+    {
+        "year": 2010,
+        "username": "korroskada",
+        "posicion": null
+    },
+    {
+        "year": 2010,
+        "username": "castlefont",
+        "posicion": null
+    },
+    {
+        "year": 2010,
+        "username": "aberasa",
+        "posicion": null
+    },
+    {
+        "year": 2011,
+        "username": "JonBaraja",
+        "posicion": 1
+    },
+    {
+        "year": 2011,
+        "username": "gorkaolaso",
+        "posicion": 2
+    },
+    {
+        "year": 2011,
+        "username": "asiermaster",
+        "posicion": 3
+    },
+    {
+        "year": 2011,
+        "username": "berasa",
+        "posicion": 4
+    },
+    {
+        "year": 2011,
+        "username": "OIER19",
+        "posicion": 5
+    },
+    {
+        "year": 2011,
+        "username": "Gurru",
+        "posicion": 6
+    },
+    {
+        "year": 2011,
+        "username": "zabalaundi",
+        "posicion": 7
+    },
+    {
+        "year": 2011,
+        "username": "galdi",
+        "posicion": 8
+    },
+    {
+        "year": 2011,
+        "username": "baxxter",
+        "posicion": 9
+    },
+    {
+        "year": 2011,
+        "username": "runspeltinskin",
+        "posicion": 10
+    },
+    {
+        "year": 2011,
+        "username": "manaria",
+        "posicion": 11
+    },
+    {
+        "year": 2011,
+        "username": "Jonel",
+        "posicion": 12
+    },
+    {
+        "year": 2011,
+        "username": "ELORRI",
+        "posicion": null
+    },
+    {
+        "year": 2011,
+        "username": "korroskada",
+        "posicion": null
+    },
+    {
+        "year": 2011,
+        "username": "castlefont",
+        "posicion": null
+    },
+    {
+        "year": 2011,
+        "username": "aberasa",
+        "posicion": null
+    },
+    {
+        "year": 2012,
+        "username": "berasa",
+        "posicion": 1
+    },
+    {
+        "year": 2012,
+        "username": "OIER19",
+        "posicion": 2
+    },
+    {
+        "year": 2012,
+        "username": "asiermaster",
+        "posicion": 3
+    },
+    {
+        "year": 2012,
+        "username": "zabalaundi",
+        "posicion": 4
+    },
+    {
+        "year": 2012,
+        "username": "JonBaraja",
+        "posicion": 5
+    },
+    {
+        "year": 2012,
+        "username": "galdi",
+        "posicion": 6
+    },
+    {
+        "year": 2012,
+        "username": "Jonel",
+        "posicion": 7
+    },
+    {
+        "year": 2012,
+        "username": "manaria",
+        "posicion": 8
+    },
+    {
+        "year": 2012,
+        "username": "Gurru",
+        "posicion": 9
+    },
+    {
+        "year": 2012,
+        "username": "runspeltinskin",
+        "posicion": 10
+    },
+    {
+        "year": 2012,
+        "username": "gorkaolaso",
+        "posicion": 11
+    },
+    {
+        "year": 2012,
+        "username": "baxxter",
+        "posicion": 12
+    },
+    {
+        "year": 2012,
+        "username": "korroskada",
+        "posicion": null
+    },
+    {
+        "year": 2012,
+        "username": "castlefont",
+        "posicion": null
+    },
+    {
+        "year": 2012,
+        "username": "aberasa",
+        "posicion": null
+    },
+    {
+        "year": 2012,
+        "username": "ELORRI",
+        "posicion": null
+    },
+    {
+        "year": 2013,
+        "username": "gorkaolaso",
+        "posicion": 1
+    },
+    {
+        "year": 2013,
+        "username": "asiermaster",
+        "posicion": 2
+    },
+    {
+        "year": 2013,
+        "username": "manaria",
+        "posicion": 3
+    },
+    {
+        "year": 2013,
+        "username": "berasa",
+        "posicion": 4
+    },
+    {
+        "year": 2013,
+        "username": "Gurru",
+        "posicion": 5
+    },
+    {
+        "year": 2013,
+        "username": "galdi",
+        "posicion": 6
+    },
+    {
+        "year": 2013,
+        "username": "Jonel",
+        "posicion": 7
+    },
+    {
+        "year": 2013,
+        "username": "OIER19",
+        "posicion": 8
+    },
+    {
+        "year": 2013,
+        "username": "runspeltinskin",
+        "posicion": 9
+    },
+    {
+        "year": 2013,
+        "username": "JonBaraja",
+        "posicion": 10
+    },
+    {
+        "year": 2013,
+        "username": "zabalaundi",
+        "posicion": 11
+    },
+    {
+        "year": 2013,
+        "username": "baxxter",
+        "posicion": 12
+    },
+    {
+        "year": 2013,
+        "username": "korroskada",
+        "posicion": null
+    },
+    {
+        "year": 2013,
+        "username": "castlefont",
+        "posicion": null
+    },
+    {
+        "year": 2013,
+        "username": "aberasa",
+        "posicion": null
+    },
+    {
+        "year": 2013,
+        "username": "ELORRI",
+        "posicion": null
+    },
+    {
+        "year": 2014,
+        "username": "asiermaster",
+        "posicion": 1
+    },
+    {
+        "year": 2014,
+        "username": "Gurru",
+        "posicion": 2
+    },
+    {
+        "year": 2014,
+        "username": "gorkaolaso",
+        "posicion": 3
+    },
+    {
+        "year": 2014,
+        "username": "Jonel",
+        "posicion": 4
+    },
+    {
+        "year": 2014,
+        "username": "OIER19",
+        "posicion": 5
+    },
+    {
+        "year": 2014,
+        "username": "galdi",
+        "posicion": 6
+    },
+    {
+        "year": 2014,
+        "username": "berasa",
+        "posicion": 7
+    },
+    {
+        "year": 2014,
+        "username": "runspeltinskin",
+        "posicion": 8
+    },
+    {
+        "year": 2014,
+        "username": "JonBaraja",
+        "posicion": 9
+    },
+    {
+        "year": 2014,
+        "username": "zabalaundi",
+        "posicion": 10
+    },
+    {
+        "year": 2014,
+        "username": "manaria",
+        "posicion": 11
+    },
+    {
+        "year": 2014,
+        "username": "korroskada",
+        "posicion": null
+    },
+    {
+        "year": 2014,
+        "username": "baxxter",
+        "posicion": null
+    },
+    {
+        "year": 2014,
+        "username": "ELORRI",
+        "posicion": null
+    },
+    {
+        "year": 2014,
+        "username": "castlefont",
+        "posicion": null
+    },
+    {
+        "year": 2014,
+        "username": "aberasa",
+        "posicion": null
+    },
+    {
+        "year": 2015,
+        "username": "asiermaster",
+        "posicion": 1
+    },
+    {
+        "year": 2015,
+        "username": "Gurru",
+        "posicion": 2
+    },
+    {
+        "year": 2015,
+        "username": "gorkaolaso",
+        "posicion": 3
+    },
+    {
+        "year": 2015,
+        "username": "OIER19",
+        "posicion": 4
+    },
+    {
+        "year": 2015,
+        "username": "galdi",
+        "posicion": 5
+    },
+    {
+        "year": 2015,
+        "username": "berasa",
+        "posicion": 6
+    },
+    {
+        "year": 2015,
+        "username": "manaria",
+        "posicion": 7
+    },
+    {
+        "year": 2015,
+        "username": "Jonel",
+        "posicion": 8
+    },
+    {
+        "year": 2015,
+        "username": "runspeltinskin",
+        "posicion": 9
+    },
+    {
+        "year": 2015,
+        "username": "JonBaraja",
+        "posicion": 10
+    },
+    {
+        "year": 2015,
+        "username": "korroskada",
+        "posicion": 11
+    },
+    {
+        "year": 2015,
+        "username": "baxxter",
+        "posicion": 12
+    },
+    {
+        "year": 2015,
+        "username": "ELORRI",
+        "posicion": null
+    },
+    {
+        "year": 2015,
+        "username": "aberasa",
+        "posicion": null
+    },
+    {
+        "year": 2015,
+        "username": "castlefont",
+        "posicion": null
+    },
+    {
+        "year": 2015,
+        "username": "zabalaundi",
+        "posicion": null
+    },
+    {
+        "year": 2016,
+        "username": "Gurru",
+        "posicion": 1
+    },
+    {
+        "year": 2016,
+        "username": "asiermaster",
+        "posicion": 2
+    },
+    {
+        "year": 2016,
+        "username": "JonBaraja",
+        "posicion": 3
+    },
+    {
+        "year": 2016,
+        "username": "berasa",
+        "posicion": 4
+    },
+    {
+        "year": 2016,
+        "username": "manaria",
+        "posicion": 5
+    },
+    {
+        "year": 2016,
+        "username": "gorkaolaso",
+        "posicion": 6
+    },
+    {
+        "year": 2016,
+        "username": "OIER19",
+        "posicion": 7
+    },
+    {
+        "year": 2016,
+        "username": "galdi",
+        "posicion": 8
+    },
+    {
+        "year": 2016,
+        "username": "runspeltinskin",
+        "posicion": 9
+    },
+    {
+        "year": 2016,
+        "username": "Jonel",
+        "posicion": 10
+    },
+    {
+        "year": 2016,
+        "username": "ELORRI",
+        "posicion": null
+    },
+    {
+        "year": 2016,
+        "username": "baxxter",
+        "posicion": null
+    },
+    {
+        "year": 2016,
+        "username": "korroskada",
+        "posicion": null
+    },
+    {
+        "year": 2016,
+        "username": "zabalaundi",
+        "posicion": null
+    },
+    {
+        "year": 2016,
+        "username": "castlefont",
+        "posicion": null
+    },
+    {
+        "year": 2016,
+        "username": "aberasa",
+        "posicion": null
+    },
+    {
+        "year": 2017,
+        "username": "Gurru",
+        "posicion": 1
+    },
+    {
+        "year": 2017,
+        "username": "berasa",
+        "posicion": 2
+    },
+    {
+        "year": 2017,
+        "username": "OIER19",
+        "posicion": 3
+    },
+    {
+        "year": 2017,
+        "username": "asiermaster",
+        "posicion": 4
+    },
+    {
+        "year": 2017,
+        "username": "Jonel",
+        "posicion": 5
+    },
+    {
+        "year": 2017,
+        "username": "runspeltinskin",
+        "posicion": 6
+    },
+    {
+        "year": 2017,
+        "username": "manaria",
+        "posicion": 7
+    },
+    {
+        "year": 2017,
+        "username": "galdi",
+        "posicion": 8
+    },
+    {
+        "year": 2017,
+        "username": "JonBaraja",
+        "posicion": 9
+    },
+    {
+        "year": 2017,
+        "username": "ELORRI",
+        "posicion": 10
+    },
+    {
+        "year": 2017,
+        "username": "gorkaolaso",
+        "posicion": 11
+    },
+    {
+        "year": 2017,
+        "username": "korroskada",
+        "posicion": null
+    },
+    {
+        "year": 2017,
+        "username": "zabalaundi",
+        "posicion": null
+    },
+    {
+        "year": 2017,
+        "username": "castlefont",
+        "posicion": null
+    },
+    {
+        "year": 2017,
+        "username": "aberasa",
+        "posicion": null
+    },
+    {
+        "year": 2017,
+        "username": "baxxter",
+        "posicion": null
+    },
+    {
+        "year": 2018,
+        "username": "asiermaster",
+        "posicion": 1
+    },
+    {
+        "year": 2018,
+        "username": "Gurru",
+        "posicion": 2
+    },
+    {
+        "year": 2018,
+        "username": "berasa",
+        "posicion": 3
+    },
+    {
+        "year": 2018,
+        "username": "OIER19",
+        "posicion": 4
+    },
+    {
+        "year": 2018,
+        "username": "runspeltinskin",
+        "posicion": 5
+    },
+    {
+        "year": 2018,
+        "username": "Jonel",
+        "posicion": 6
+    },
+    {
+        "year": 2018,
+        "username": "manaria",
+        "posicion": 7
+    },
+    {
+        "year": 2018,
+        "username": "JonBaraja",
+        "posicion": 8
+    },
+    {
+        "year": 2018,
+        "username": "ELORRI",
+        "posicion": 9
+    },
+    {
+        "year": 2018,
+        "username": "gorkaolaso",
+        "posicion": 10
+    },
+    {
+        "year": 2018,
+        "username": "baxxter",
+        "posicion": null
+    },
+    {
+        "year": 2018,
+        "username": "galdi",
+        "posicion": null
+    },
+    {
+        "year": 2018,
+        "username": "zabalaundi",
+        "posicion": null
+    },
+    {
+        "year": 2018,
+        "username": "castlefont",
+        "posicion": null
+    },
+    {
+        "year": 2018,
+        "username": "aberasa",
+        "posicion": null
+    },
+    {
+        "year": 2018,
+        "username": "korroskada",
+        "posicion": null
+    },
+    {
+        "year": 2019,
+        "username": "asiermaster",
+        "posicion": 1
+    },
+    {
+        "year": 2019,
+        "username": "OIER19",
+        "posicion": 2
+    },
+    {
+        "year": 2019,
+        "username": "Gurru",
+        "posicion": 3
+    },
+    {
+        "year": 2019,
+        "username": "manaria",
+        "posicion": 4
+    },
+    {
+        "year": 2019,
+        "username": "berasa",
+        "posicion": 5
+    },
+    {
+        "year": 2019,
+        "username": "Jonel",
+        "posicion": 6
+    },
+    {
+        "year": 2019,
+        "username": "runspeltinskin",
+        "posicion": 7
+    },
+    {
+        "year": 2019,
+        "username": "galdi",
+        "posicion": 8
+    },
+    {
+        "year": 2019,
+        "username": "JonBaraja",
+        "posicion": 9
+    },
+    {
+        "year": 2019,
+        "username": "gorkaolaso",
+        "posicion": 10
+    },
+    {
+        "year": 2019,
+        "username": "ELORRI",
+        "posicion": 11
+    },
+    {
+        "year": 2019,
+        "username": "castlefont",
+        "posicion": null
+    },
+    {
+        "year": 2019,
+        "username": "aberasa",
+        "posicion": null
+    },
+    {
+        "year": 2019,
+        "username": "korroskada",
+        "posicion": null
+    },
+    {
+        "year": 2019,
+        "username": "baxxter",
+        "posicion": null
+    },
+    {
+        "year": 2019,
+        "username": "zabalaundi",
+        "posicion": null
+    },
+    {
+        "year": 2020,
+        "username": "asiermaster",
+        "posicion": 1
+    },
+    {
+        "year": 2020,
+        "username": "Gurru",
+        "posicion": 2
+    },
+    {
+        "year": 2020,
+        "username": "OIER19",
+        "posicion": 3
+    },
+    {
+        "year": 2020,
+        "username": "gorkaolaso",
+        "posicion": 4
+    },
+    {
+        "year": 2020,
+        "username": "berasa",
+        "posicion": 5
+    },
+    {
+        "year": 2020,
+        "username": "Jonel",
+        "posicion": 6
+    },
+    {
+        "year": 2020,
+        "username": "runspeltinskin",
+        "posicion": 7
+    },
+    {
+        "year": 2020,
+        "username": "galdi",
+        "posicion": 8
+    },
+    {
+        "year": 2020,
+        "username": "manaria",
+        "posicion": 9
+    },
+    {
+        "year": 2020,
+        "username": "ELORRI",
+        "posicion": null
+    },
+    {
+        "year": 2020,
+        "username": "baxxter",
+        "posicion": null
+    },
+    {
+        "year": 2020,
+        "username": "JonBaraja",
+        "posicion": null
+    },
+    {
+        "year": 2020,
+        "username": "korroskada",
+        "posicion": null
+    },
+    {
+        "year": 2020,
+        "username": "zabalaundi",
+        "posicion": null
+    },
+    {
+        "year": 2020,
+        "username": "castlefont",
+        "posicion": null
+    },
+    {
+        "year": 2020,
+        "username": "aberasa",
+        "posicion": null
+    },
+    {
+        "year": 2021,
+        "username": "asiermaster",
+        "posicion": 1
+    },
+    {
+        "year": 2021,
+        "username": "galdi",
+        "posicion": 2
+    },
+    {
+        "year": 2021,
+        "username": "OIER19",
+        "posicion": 3
+    },
+    {
+        "year": 2021,
+        "username": "Gurru",
+        "posicion": 4
+    },
+    {
+        "year": 2021,
+        "username": "manaria",
+        "posicion": 5
+    },
+    {
+        "year": 2021,
+        "username": "runspeltinskin",
+        "posicion": 6
+    },
+    {
+        "year": 2021,
+        "username": "berasa",
+        "posicion": 7
+    },
+    {
+        "year": 2021,
+        "username": "Jonel",
+        "posicion": 8
+    },
+    {
+        "year": 2021,
+        "username": "ELORRI",
+        "posicion": null
+    },
+    {
+        "year": 2021,
+        "username": "baxxter",
+        "posicion": null
+    },
+    {
+        "year": 2021,
+        "username": "JonBaraja",
+        "posicion": null
+    },
+    {
+        "year": 2021,
+        "username": "korroskada",
+        "posicion": null
+    },
+    {
+        "year": 2021,
+        "username": "gorkaolaso",
+        "posicion": null
+    },
+    {
+        "year": 2021,
+        "username": "zabalaundi",
+        "posicion": null
+    },
+    {
+        "year": 2021,
+        "username": "castlefont",
+        "posicion": null
+    },
+    {
+        "year": 2021,
+        "username": "aberasa",
+        "posicion": null
+    },
+    {
+        "year": 2022,
+        "username": "asiermaster",
+        "posicion": 1
+    },
+    {
+        "year": 2022,
+        "username": "Gurru",
+        "posicion": 2
+    },
+    {
+        "year": 2022,
+        "username": "galdi",
+        "posicion": 3
+    },
+    {
+        "year": 2022,
+        "username": "OIER19",
+        "posicion": 4
+    },
+    {
+        "year": 2022,
+        "username": "manaria",
+        "posicion": 5
+    },
+    {
+        "year": 2022,
+        "username": "runspeltinskin",
+        "posicion": 6
+    },
+    {
+        "year": 2022,
+        "username": "Jonel",
+        "posicion": 7
+    },
+    {
+        "year": 2022,
+        "username": "berasa",
+        "posicion": 8
+    },
+    {
+        "year": 2022,
+        "username": "zabalaundi",
+        "posicion": 9
+    },
+    {
+        "year": 2022,
+        "username": "ELORRI",
+        "posicion": 10
+    },
+    {
+        "year": 2022,
+        "username": "JonBaraja",
+        "posicion": null
+    },
+    {
+        "year": 2022,
+        "username": "gorkaolaso",
+        "posicion": null
+    },
+    {
+        "year": 2022,
+        "username": "castlefont",
+        "posicion": null
+    },
+    {
+        "year": 2022,
+        "username": "aberasa",
+        "posicion": null
+    },
+    {
+        "year": 2022,
+        "username": "korroskada",
+        "posicion": null
+    },
+    {
+        "year": 2022,
+        "username": "baxxter",
+        "posicion": null
+    },
+    {
+        "year": 2023,
+        "username": "asiermaster",
+        "posicion": 1
+    },
+    {
+        "year": 2023,
+        "username": "Gurru",
+        "posicion": 2
+    },
+    {
+        "year": 2023,
+        "username": "OIER19",
+        "posicion": 3
+    },
+    {
+        "year": 2023,
+        "username": "galdi",
+        "posicion": 4
+    },
+    {
+        "year": 2023,
+        "username": "Jonel",
+        "posicion": 5
+    },
+    {
+        "year": 2023,
+        "username": "runspeltinskin",
+        "posicion": 6
+    },
+    {
+        "year": 2023,
+        "username": "manaria",
+        "posicion": 7
+    },
+    {
+        "year": 2023,
+        "username": "berasa",
+        "posicion": 8
+    },
+    {
+        "year": 2023,
+        "username": "zabalaundi",
+        "posicion": 9
+    },
+    {
+        "year": 2023,
+        "username": "JonBaraja",
+        "posicion": null
+    },
+    {
+        "year": 2023,
+        "username": "baxxter",
+        "posicion": null
+    },
+    {
+        "year": 2023,
+        "username": "korroskada",
+        "posicion": null
+    },
+    {
+        "year": 2023,
+        "username": "ELORRI",
+        "posicion": null
+    },
+    {
+        "year": 2023,
+        "username": "gorkaolaso",
+        "posicion": null
+    },
+    {
+        "year": 2023,
+        "username": "castlefont",
+        "posicion": null
+    },
+    {
+        "year": 2023,
+        "username": "aberasa",
+        "posicion": null
+    },
+    {
+        "year": 2024,
+        "username": "asiermaster",
+        "posicion": 1
+    },
+    {
+        "year": 2024,
+        "username": "Gurru",
+        "posicion": 2
+    },
+    {
+        "year": 2024,
+        "username": "OIER19",
+        "posicion": 3
+    },
+    {
+        "year": 2024,
+        "username": "manaria",
+        "posicion": 4
+    },
+    {
+        "year": 2024,
+        "username": "Jonel",
+        "posicion": 5
+    },
+    {
+        "year": 2024,
+        "username": "runspeltinskin",
+        "posicion": 6
+    },
+    {
+        "year": 2024,
+        "username": "galdi",
+        "posicion": 7
+    },
+    {
+        "year": 2024,
+        "username": "berasa",
+        "posicion": 8
+    },
+    {
+        "year": 2024,
+        "username": "baxxter",
+        "posicion": 9
+    },
+    {
+        "year": 2024,
+        "username": "zabalaundi",
+        "posicion": 10
+    },
+    {
+        "year": 2024,
+        "username": "korroskada",
+        "posicion": 11
+    },
+    {
+        "year": 2024,
+        "username": "ELORRI",
+        "posicion": 12
+    },
+    {
+        "year": 2024,
+        "username": "JonBaraja",
+        "posicion": null
+    },
+    {
+        "year": 2024,
+        "username": "gorkaolaso",
+        "posicion": null
+    },
+    {
+        "year": 2024,
+        "username": "castlefont",
+        "posicion": null
+    },
+    {
+        "year": 2024,
+        "username": "aberasa",
+        "posicion": null
+    },
+    {
+        "year": 2025,
+        "username": "asiermaster",
+        "posicion": 1
+    },
+    {
+        "year": 2025,
+        "username": "Gurru",
+        "posicion": 2
+    },
+    {
+        "year": 2025,
+        "username": "galdi",
+        "posicion": 3
+    },
+    {
+        "year": 2025,
+        "username": "OIER19",
+        "posicion": 4
+    },
+    {
+        "year": 2025,
+        "username": "Jonel",
+        "posicion": 5
+    },
+    {
+        "year": 2025,
+        "username": "runspeltinskin",
+        "posicion": 6
+    },
+    {
+        "year": 2025,
+        "username": "berasa",
+        "posicion": 7
+    },
+    {
+        "year": 2025,
+        "username": "manaria",
+        "posicion": 8
+    },
+    {
+        "year": 2025,
+        "username": "baxxter",
+        "posicion": 9
+    },
+    {
+        "year": 2025,
+        "username": "zabalaundi",
+        "posicion": 10
+    },
+    {
+        "year": 2025,
+        "username": "aberasa",
+        "posicion": null
+    },
+    {
+        "year": 2025,
+        "username": "JonBaraja",
+        "posicion": null
+    },
+    {
+        "year": 2025,
+        "username": "korroskada",
+        "posicion": null
+    },
+    {
+        "year": 2025,
+        "username": "ELORRI",
+        "posicion": null
+    },
+    {
+        "year": 2025,
+        "username": "gorkaolaso",
+        "posicion": null
+    },
+    {
+        "year": 2025,
+        "username": "castlefont",
+        "posicion": null
+    },
+    {
+        "year": 2026,
+        "username": "berasa",
+        "posicion": null
+    },
+    {
+        "year": 2026,
+        "username": "manaria",
+        "posicion": null
+    },
+    {
+        "year": 2026,
+        "username": "OIER19",
+        "posicion": null
+    },
+    {
+        "year": 2026,
+        "username": "baxxter",
+        "posicion": null
+    },
+    {
+        "year": 2026,
+        "username": "galdi",
+        "posicion": null
+    },
+    {
+        "year": 2026,
+        "username": "asiermaster",
+        "posicion": null
+    },
+    {
+        "year": 2026,
+        "username": "runspeltinskin",
+        "posicion": null
+    },
+    {
+        "year": 2026,
+        "username": "Jonel",
+        "posicion": null
+    },
+    {
+        "year": 2026,
+        "username": "JonBaraja",
+        "posicion": null
+    },
+    {
+        "year": 2026,
+        "username": "korroskada",
+        "posicion": null
+    },
+    {
+        "year": 2026,
+        "username": "ELORRI",
+        "posicion": null
+    },
+    {
+        "year": 2026,
+        "username": "gorkaolaso",
+        "posicion": null
+    },
+    {
+        "year": 2026,
+        "username": "zabalaundi",
+        "posicion": null
+    },
+    {
+        "year": 2026,
+        "username": "castlefont",
+        "posicion": null
+    },
+    {
+        "year": 2026,
+        "username": "aberasa",
+        "posicion": null
+    },
+    {
+        "year": 2026,
+        "username": "Gurru",
+        "posicion": null
+    }
+];
 
 var participantes = [
-    { id: 1, nombre: 'berasa', imagen: 'images/julian-alaphilippe-2020.jpeg' },
+            { id: 1, nombre: 'berasa', imagen: 'images/julian-alaphilippe-2020.jpeg' },
     { id: 2, nombre: 'manaria', imagen: 'images/jerome-pineau-2009.jpg' },
     { id: 3, nombre: 'OIER19', imagen: 'images/empty_avatar.jpg' },
     { id: 4, nombre: 'baxxter', imagen: 'images/kevin_reza_2013.jpg' },
@@ -13,7 +1613,7 @@ var participantes = [
     { id: 9, nombre: 'JonBaraja', imagen: 'images/empty_avatar.jpg' },
     { id: 10, nombre: 'gorkaolaso', imagen: 'images/empty_avatar.jpg' },
     { id: 11, nombre: 'zabalaundi', imagen: 'images/empty_avatar.jpg' },
-    { id: 12, nombre: 'gurrutxaga', imagen: 'images/chris-horner-2014.jpg' },
+    { id: 12, nombre: 'Gurru', imagen: 'images/chris-horner-2014.jpg' },
     { id: 13, nombre: 'castlefont', imagen: 'images/natnael-tesfatsion-2024.png' },
     { id: 14, nombre: 'korroskada', imagen: 'images/empty_avatar.jpg' },
     { id: 15, nombre: 'ELORRI', imagen: 'images/tejay-van-garderen-2013.jpg' }
