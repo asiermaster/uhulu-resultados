@@ -111,20 +111,22 @@ function showParticipant(id) {
     }
 
     var participante = null;
+    var currentIndex = -1;
     for (var j = 0; j < participantes.length; j++) {
         if (participantes[j].id === id) {
             participante = participantes[j];
+            currentIndex = j;
             break;
         }
     }
     if (!participante) return;
 
     var stats = computeStats(participante.nombre);
-    renderProfile(participante, stats);
+    renderProfile(participante, stats, currentIndex, participantes);
     addChart(participante.nombre);
 }
 
-function renderProfile(participante, stats) {
+function renderProfile(participante, stats, currentIndex, participantes) {
     var container = document.getElementById('participantProfile');
 
     var medalHtml = '';
@@ -137,7 +139,22 @@ function renderProfile(participante, stats) {
         ? Math.min.apply(null, stats.years) + '-' + Math.max.apply(null, stats.years)
         : '-';
 
+    var prevId = participantes[(currentIndex - 1 + participantes.length) % participantes.length].id;
+    var nextId = participantes[(currentIndex + 1) % participantes.length].id;
+
     var html = '';
+
+    // Navigation
+    html += '<div class="profile-nav">';
+    html += '  <button class="btn-nav-prev" data-id="' + prevId + '">\u25C0</button>';
+    html += '  <select class="participant-select">';
+    for (var i = 0; i < participantes.length; i++) {
+        var sel = (i === currentIndex) ? ' selected' : '';
+        html += '    <option value="' + participantes[i].id + '"' + sel + '>' + participantes[i].nombre + '</option>';
+    }
+    html += '  </select>';
+    html += '  <button class="btn-nav-next" data-id="' + nextId + '">\u25B6</button>';
+    html += '</div>';
 
     // Header
     html += '<div class="profile-header">';
@@ -170,6 +187,17 @@ function renderProfile(participante, stats) {
     html += '</tbody></table></div>';
 
     container.innerHTML = html;
+
+    // Attach nav event listeners
+    container.querySelector('.btn-nav-prev').addEventListener('click', function () {
+        showParticipant(parseInt(this.getAttribute('data-id')));
+    });
+    container.querySelector('.btn-nav-next').addEventListener('click', function () {
+        showParticipant(parseInt(this.getAttribute('data-id')));
+    });
+    container.querySelector('.participant-select').addEventListener('change', function () {
+        showParticipant(parseInt(this.value));
+    });
 }
 
 function addChart(nombre) {

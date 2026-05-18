@@ -147,6 +147,7 @@ function addEventCampeonatoDelMundo(){
 
 
 function loadCampeonatoDelMundo(sidebarMenu){
+    hideYearNav();
     var $table = $('#tableMedallero');
     $table.bootstrapTable('load', []);
     $table.bootstrapTable('load', historico_clasificaciones_year);
@@ -178,6 +179,7 @@ function addEventMedalleroHistorico(){
 }
 
 function loadMedalleroHistorico(){
+    hideYearNav();
     var $table = $('#tableMedallero');
     $table.bootstrapTable('load', []);
     $table.bootstrapTable('load', medalleroHistorico);
@@ -207,6 +209,57 @@ function addEventMedalleroYear(){
     });
 }
 
+var medalleroYears = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007];
+
+function renderYearNav(currentYear) {
+    var nav = document.getElementById('yearNav');
+    if (!nav) return;
+
+    currentYear = parseInt(currentYear);
+    var idx = medalleroYears.indexOf(currentYear);
+    if (idx === -1) return;
+
+    var prevYear = medalleroYears[(idx - 1 + medalleroYears.length) % medalleroYears.length];
+    var nextYear = medalleroYears[(idx + 1) % medalleroYears.length];
+
+    var html = '<div class="year-nav-inner">';
+    html += '  <button class="btn-year-prev" data-year="' + prevYear + '">\u25C0</button>';
+    html += '  <select class="year-select">';
+    for (var i = 0; i < medalleroYears.length; i++) {
+        var sel = medalleroYears[i] === currentYear ? ' selected' : '';
+        html += '    <option value="' + medalleroYears[i] + '"' + sel + '>' + medalleroYears[i] + '</option>';
+    }
+    html += '  </select>';
+    html += '  <button class="btn-year-next" data-year="' + nextYear + '">\u25B6</button>';
+    html += '</div>';
+
+    nav.innerHTML = html;
+    nav.style.display = 'block';
+
+    nav.querySelector('.btn-year-prev').addEventListener('click', function () {
+        navigateToYear(parseInt(this.getAttribute('data-year')));
+    });
+    nav.querySelector('.btn-year-next').addEventListener('click', function () {
+        navigateToYear(parseInt(this.getAttribute('data-year')));
+    });
+    nav.querySelector('.year-select').addEventListener('change', function () {
+        navigateToYear(parseInt(this.value));
+    });
+}
+
+function hideYearNav() {
+    var nav = document.getElementById('yearNav');
+    if (nav) nav.style.display = 'none';
+}
+
+function navigateToYear(year) {
+    hideEveryRow();
+    showMedalleroRow();
+    var sidebarLink = document.getElementById('medallero_' + year);
+    if (sidebarLink) setActiveSidebarLink(sidebarLink);
+    loadMedalleroYear(year);
+}
+
 function loadMedalleroYear(year){
     var $table = $('#tableMedallero');
     $table.bootstrapTable('load', []);
@@ -221,6 +274,7 @@ function loadMedalleroYear(year){
     
     $("#medalleroTitle").html("Medallero " + year);
     $("#puntosTitle").html("Puntos " + year);
+    renderYearNav(year);
     window.scrollTo(0, 0);
 }
 
