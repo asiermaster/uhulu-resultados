@@ -148,7 +148,6 @@ function addEventCampeonatoDelMundo(){
 
 function loadCampeonatoDelMundo(sidebarMenu){
     hideYearNav();
-    hideChampionCard();
     var $table = $('#tableMedallero');
     $table.bootstrapTable('load', []);
     $table.bootstrapTable('load', historico_clasificaciones_year);
@@ -159,7 +158,8 @@ function loadCampeonatoDelMundo(sidebarMenu){
     $tablePuntos.bootstrapTable('sortBy', {field: 'posicion', sortOrder: 'asc'});
     
     $("#medalleroTitle").html("Medallero campeonatos del mundo");
-    $("#puntosTitle").html("Puntos histórico");
+    $("#puntosTitle").html("Puntos hist\u00F3rico");
+    renderChampionCardFromData(puntos_totales, historico_clasificaciones_year, 'Campe\u00F3n del mundo');
 
 }
 
@@ -181,7 +181,6 @@ function addEventMedalleroHistorico(){
 
 function loadMedalleroHistorico(){
     hideYearNav();
-    hideChampionCard();
     var $table = $('#tableMedallero');
     $table.bootstrapTable('load', []);
     $table.bootstrapTable('load', medalleroHistorico);
@@ -191,8 +190,9 @@ function loadMedalleroHistorico(){
     $tablePuntos.bootstrapTable('load', puntos_totales);
     $tablePuntos.bootstrapTable('sortBy', {field: 'posicion', sortOrder: 'asc'});
 
-    $("#medalleroTitle").html("Medallero histórico");
-    $("#puntosTitle").html("Puntos histórico");
+    $("#medalleroTitle").html("Medallero hist\u00F3rico");
+    $("#puntosTitle").html("Puntos hist\u00F3rico");
+    renderChampionCardFromData(puntos_totales, medalleroHistorico, 'Campe\u00F3n hist\u00F3rico');
 }
 
 function addEventMedalleroYear(){
@@ -295,20 +295,19 @@ function findParticipante(username) {
     return null;
 }
 
-function renderChampionCard(year) {
+function renderChampionCardFromData(puntosData, medalleroData, title) {
     var container = document.getElementById('championCard');
     if (!container) return;
 
-    var puntos = window["puntos" + year];
-    if (!puntos || puntos.length === 0) {
+    if (!puntosData || puntosData.length === 0) {
         container.innerHTML = '';
         return;
     }
 
     var champion = null;
-    for (var i = 0; i < puntos.length; i++) {
-        if (puntos[i].posicion === 1) {
-            champion = puntos[i];
+    for (var i = 0; i < puntosData.length; i++) {
+        if (puntosData[i].posicion === 1) {
+            champion = puntosData[i];
             break;
         }
     }
@@ -317,14 +316,13 @@ function renderChampionCard(year) {
         return;
     }
 
-    var medallas = window["medallero" + year];
     var oro = 0, plata = 0, bronce = 0;
-    if (medallas) {
-        for (var i = 0; i < medallas.length; i++) {
-            if (medallas[i].username === champion.username) {
-                oro = medallas[i].oro || 0;
-                plata = medallas[i].plata || 0;
-                bronce = medallas[i].bronce || 0;
+    if (medalleroData) {
+        for (var i = 0; i < medalleroData.length; i++) {
+            if (medalleroData[i].username === champion.username) {
+                oro = medalleroData[i].oro || 0;
+                plata = medalleroData[i].plata || 0;
+                bronce = medalleroData[i].bronce || 0;
                 break;
             }
         }
@@ -341,7 +339,7 @@ function renderChampionCard(year) {
         + '  <div class="champion-crown">\u{1F451}</div>'
         + '  <img src="' + imagen + '" class="champion-photo" alt="' + nombre + '" onerror="this.src=\'images/empty_avatar.jpg\'">'
         + '  <div class="champion-name">' + nombre + '</div>'
-        + '  <div class="champion-title">Campe\u00F3n del mundo ' + year + '</div>'
+        + '  <div class="champion-title">' + title + '</div>'
         + '  <div class="champion-points">\u{1F4CA} ' + pts + ' pts</div>'
         + '  <div class="champion-medals">'
         + '    <span class="champion-medal gold"><span class="medal-icon">\u{1F947}</span> ' + oro + '</span>'
@@ -349,6 +347,10 @@ function renderChampionCard(year) {
         + '    <span class="champion-medal bronze"><span class="medal-icon">\u{1F949}</span> ' + bronce + '</span>'
         + '  </div>'
         + '</div>';
+}
+
+function renderChampionCard(year) {
+    renderChampionCardFromData(window["puntos" + year], window["medallero" + year], 'Campe\u00F3n ' + year);
 }
 
 function hideChampionCard() {
