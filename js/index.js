@@ -148,6 +148,7 @@ function addEventCampeonatoDelMundo(){
 
 function loadCampeonatoDelMundo(sidebarMenu){
     hideYearNav();
+    hideChampionCard();
     var $table = $('#tableMedallero');
     $table.bootstrapTable('load', []);
     $table.bootstrapTable('load', historico_clasificaciones_year);
@@ -180,6 +181,7 @@ function addEventMedalleroHistorico(){
 
 function loadMedalleroHistorico(){
     hideYearNav();
+    hideChampionCard();
     var $table = $('#tableMedallero');
     $table.bootstrapTable('load', []);
     $table.bootstrapTable('load', medalleroHistorico);
@@ -275,7 +277,83 @@ function loadMedalleroYear(year){
     $("#medalleroTitle").html("Medallero " + year);
     $("#puntosTitle").html("Puntos " + year);
     renderYearNav(year);
+    renderChampionCard(year);
     window.scrollTo(0, 0);
+}
+
+function findParticipante(username) {
+    for (var i = 0; i < participantes.length; i++) {
+        if (participantes[i].nombre.toLowerCase() === username.toLowerCase()) {
+            return participantes[i];
+        }
+    }
+    if (username.toLowerCase() === 'gurrutxaga') {
+        for (var i = 0; i < participantes.length; i++) {
+            if (participantes[i].nombre === 'Gurru') return participantes[i];
+        }
+    }
+    return null;
+}
+
+function renderChampionCard(year) {
+    var container = document.getElementById('championCard');
+    if (!container) return;
+
+    var puntos = window["puntos" + year];
+    if (!puntos || puntos.length === 0) {
+        container.innerHTML = '';
+        return;
+    }
+
+    var champion = null;
+    for (var i = 0; i < puntos.length; i++) {
+        if (puntos[i].posicion === 1) {
+            champion = puntos[i];
+            break;
+        }
+    }
+    if (!champion) {
+        container.innerHTML = '';
+        return;
+    }
+
+    var medallas = window["medallero" + year];
+    var oro = 0, plata = 0, bronce = 0;
+    if (medallas) {
+        for (var i = 0; i < medallas.length; i++) {
+            if (medallas[i].username === champion.username) {
+                oro = medallas[i].oro || 0;
+                plata = medallas[i].plata || 0;
+                bronce = medallas[i].bronce || 0;
+                break;
+            }
+        }
+    }
+
+    var participante = findParticipante(champion.username);
+    var imagen = participante ? participante.imagen : 'images/empty_avatar.jpg';
+    var nombre = participante ? participante.nombre : champion.username;
+
+    var pts = champion.puntos.toLocaleString();
+
+    container.innerHTML = ''
+        + '<div class="champion-card">'
+        + '  <div class="champion-crown">\u{1F451}</div>'
+        + '  <img src="' + imagen + '" class="champion-photo" alt="' + nombre + '" onerror="this.src=\'images/empty_avatar.jpg\'">'
+        + '  <div class="champion-name">' + nombre + '</div>'
+        + '  <div class="champion-title">Campe\u00F3n del mundo ' + year + '</div>'
+        + '  <div class="champion-points">\u{1F4CA} ' + pts + ' pts</div>'
+        + '  <div class="champion-medals">'
+        + '    <span class="champion-medal gold"><span class="medal-icon">\u{1F947}</span> ' + oro + '</span>'
+        + '    <span class="champion-medal silver"><span class="medal-icon">\u{1F948}</span> ' + plata + '</span>'
+        + '    <span class="champion-medal bronze"><span class="medal-icon">\u{1F949}</span> ' + bronce + '</span>'
+        + '  </div>'
+        + '</div>';
+}
+
+function hideChampionCard() {
+    var container = document.getElementById('championCard');
+    if (container) container.innerHTML = '';
 }
 
 

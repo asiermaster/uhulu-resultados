@@ -23,6 +23,7 @@
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.6/dist/bootstrap-table.min.js"></script>
   <script type="text/javascript" language="javascript" src="data/data.js"></script>
+  <script type="text/javascript" language="javascript" src="data/participantesData.js"></script>
 
   <title>Peña Astopotro</title>
 </head>
@@ -52,8 +53,10 @@
 
                     <div id="rowMedalleros" class="row">
                         <div id="yearNav"></div>
-                        <!-- First half -->
-                        <div class="col-12 col-lg-6">
+                        <!-- Champion card -->
+                        <div id="championCard" class="col-12 col-lg-3"></div>
+                        <!-- Medallero table -->
+                        <div class="col-12 col-lg-5">
                           <h2 id="medalleroTitle"></h2>
                           <div class="table-responsive">
                           <table class="table table-striped w-auto" id="tableMedallero" data-search="false" data-search-align="left">
@@ -79,7 +82,7 @@
                           </table>
                           </div>
                         </div>
-                        <!-- Second half -->
+                        <!-- Puntos table -->
                         <div class="col-12 col-lg-4">
                           <h2 id="puntosTitle"></h2>
                           <div class="table-responsive">
