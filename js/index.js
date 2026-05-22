@@ -287,11 +287,6 @@ function findParticipante(username) {
             return participantes[i];
         }
     }
-    if (username.toLowerCase() === 'gurrutxaga') {
-        for (var i = 0; i < participantes.length; i++) {
-            if (participantes[i].nombre === 'Gurru') return participantes[i];
-        }
-    }
     return null;
 }
 
@@ -359,6 +354,43 @@ function hideChampionCard() {
 }
 
 
+function renderPeorChampionCard() {
+    var container = document.getElementById('peorChampionCard');
+    if (!container) return;
+
+    var data = ultimo_competicion_veces;
+    if (!data || data.length === 0) {
+        container.innerHTML = '';
+        return;
+    }
+
+    var champion = null;
+    for (var i = 0; i < data.length; i++) {
+        if (data[i].posicion === 1) {
+            champion = data[i];
+            break;
+        }
+    }
+    if (!champion) {
+        container.innerHTML = '';
+        return;
+    }
+
+    var participante = findParticipante(champion.username);
+    var imagen = participante ? participante.imagen : 'images/empty_avatar.jpg';
+    var nombre = participante ? participante.nombre : champion.username;
+    var veces = champion.veces_ultimo_quiniela;
+
+    container.innerHTML = ''
+        + '<div class="champion-card">'
+        + '  <div class="champion-crown">😂</div>'
+        + '  <img src="' + imagen + '" class="champion-photo" alt="' + nombre + '" onerror="this.src=\'images/empty_avatar.jpg\'">'
+        + '  <div class="champion-name">' + nombre + '</div>'
+        + '  <div class="champion-title">Cuanto peor mejor</div>'
+        + '  <div class="champion-points">😂 ' + veces + ' veces \u00FAltimo</div>'
+        + '</div>';
+}
+
 function addEventMejorPeor(){
     const sidebarMenu = document.body.querySelector('#mejorpeor');
     if (sidebarMenu) {
@@ -368,6 +400,7 @@ function addEventMejorPeor(){
             $(function () {
                 hideEveryRow();
                 $('#rowMejorPeor').show().addClass('row-fade-in');
+                renderPeorChampionCard();
               })
             
         });
