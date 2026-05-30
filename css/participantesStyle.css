@@ -116,15 +116,15 @@
 }
 
 .history-table tbody tr.medal-1 {
-    background: rgba(255, 215, 0, 0.08);
+    background: rgba(255, 215, 0, 0.2);
 }
 
 .history-table tbody tr.medal-2 {
-    background: rgba(192, 192, 192, 0.08);
+    background: rgba(192, 192, 192, 0.2);
 }
 
 .history-table tbody tr.medal-3 {
-    background: rgba(205, 127, 50, 0.08);
+    background: rgba(205, 127, 50, 0.2);
 }
 
 /* ===========================
@@ -241,4 +241,56 @@
     .history-table td {
         padding: 6px 10px;
     }
+    .tab-custom-nav .nav-link {
+        font-size: 0.75rem;
+        padding: 8px 12px;
+    }
+}
+
+/* ===========================
+   Tab Navigation
+   =========================== */
+
+.tab-custom-nav {
+    border-bottom: 2px solid var(--sidebar-bg, #1a2a3a);
+    margin-bottom: 24px;
+    gap: 2px;
+}
+
+.tab-custom-nav .nav-link {
+    color: var(--color-text, #2c3e50);
+    border: none;
+    padding: 10px 22px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+    border-radius: 6px 6px 0 0;
+    background: transparent;
+}
+
+.tab-custom-nav .nav-link:hover {
+    color: var(--color-primary-light, #2ecc71);
+    background: rgba(46, 204, 113, 0.06);
+}
+
+.tab-custom-nav .nav-link.active {
+    color: #fff;
+    background: var(--sidebar-bg, #1a2a3a);
+    border: none;
+}
+
+.tab-custom-nav .nav-link:focus {
+    outline: none;
+}
+
+/* Tab placeholder for empty sections */
+
+.tab-placeholder {
+    text-align: center;
+    padding: 80px 20px;
+    color: #aaa;
+    font-size: 1.1rem;
+    font-style: italic;
 }

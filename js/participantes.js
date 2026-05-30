@@ -79,19 +79,28 @@ function computeStats(nombre) {
     for (var k = 0; k < positions.length; k++) sum += positions[k];
     var media = (sum / positions.length).toFixed(1);
 
-    var yearSet = {};
+    var tropelaPositions = [];
     for (var m = 0; m < rows.length; m++) {
-        yearSet[rows[m].year] = true;
+        if (rows[m].posiciontropela !== null) {
+            tropelaPositions.push(rows[m].posiciontropela);
+        }
+    }
+    var mejorTropela = tropelaPositions.length > 0 ? Math.min.apply(null, tropelaPositions) : '-';
+    var mediaTropela = tropelaPositions.length > 0 ? Math.round(tropelaPositions.reduce(function (a, b) { return a + b; }, 0) / tropelaPositions.length) : '-';
+
+    var yearSet = {};
+    for (var m2 = 0; m2 < rows.length; m2++) {
+        yearSet[rows[m2].year] = true;
     }
     var years = Object.keys(yearSet).map(Number).sort(function (a, b) { return b - a; });
 
     var historial = [];
     for (var n = 0; n < rows.length; n++) {
-        historial.push({ year: rows[n].year, pos: rows[n].posicion });
+        historial.push({ year: rows[n].year, pos: rows[n].posicion, posTropela: rows[n].posiciontropela });
     }
     historial.sort(function (a, b) { return b.year - a.year; });
 
-    return { medallas: medallas, mejor: mejor, peor: peor, media: media, years: years, historial: historial };
+    return { medallas: medallas, mejor: mejor, peor: peor, media: media, mejorTropela: mejorTropela, mediaTropela: mediaTropela, years: years, historial: historial };
 }
 
 function showParticipant(id) {
@@ -165,26 +174,56 @@ function renderProfile(participante, stats, currentIndex, participantes) {
     html += '      <span class="stat-badge medal-badge">\u{1F3C6} ' + medalHtml + '</span>';
     html += '      <span class="stat-badge">\u{1F4C5} ' + stats.years.length + ' temp. (' + yearsRange + ')</span>';
     html += '      <span class="stat-badge">\u{1F4CA} Mejor: ' + stats.mejor + '\u00BA \u00B7 Peor: ' + stats.peor + '\u00BA \u00B7 Media: ' + stats.media + '</span>';
+    html += '      <span class="stat-badge">\u{1F4CD} Tropela: Mejor ' + stats.mejorTropela + '\u00BA \u00B7 Media ' + stats.mediaTropela + '</span>';
     html += '    </div>';
     html += '  </div>';
     html += '</div>';
 
-    // Chart
-    html += '<div class="profile-section"><h3>\u{1F4C8} Evoluci\u00F3n</h3><div class="result-section"><canvas id="resultChart"></canvas></div></div>';
+    // Tab navigation
+    html += '<ul class="nav nav-tabs tab-custom-nav" role="tablist">';
+    html += '  <li class="nav-item" role="presentation">';
+    html += '    <button class="nav-link active" id="tab-general-tab" data-bs-toggle="tab" data-bs-target="#tab-general" type="button" role="tab">\u{1F3C6} Clasificaci\u00F3n General</button>';
+    html += '  </li>';
+    html += '  <li class="nav-item" role="presentation">';
+    html += '    <button class="nav-link" id="tab-competiciones-tab" data-bs-toggle="tab" data-bs-target="#tab-competiciones" type="button" role="tab">\u{1F4CA} Datos Competiciones</button>';
+    html += '  </li>';
+    html += '  <li class="nav-item" role="presentation">';
+    html += '    <button class="nav-link" id="tab-peor-mejor-tab" data-bs-toggle="tab" data-bs-target="#tab-peor-mejor" type="button" role="tab">\u{1F480} Cuanto Peor Mejor</button>';
+    html += '  </li>';
+    html += '</ul>';
 
-    // History table
-    html += '<div class="profile-section"><h3>\u{1F4CB} Historial</h3>';
-    html += '<table class="history-table"><thead><tr><th>A\u00F1o</th><th>Puesto</th><th>Medalla</th></tr></thead><tbody>';
+    // Tab content
+    html += '<div class="tab-content">';
+
+    // General tab (existing content)
+    html += '<div class="tab-pane fade show active" id="tab-general" role="tabpanel">';
+    html += '  <div class="profile-section"><h3>\u{1F4C8} Evoluci\u00F3n</h3><div class="result-section"><canvas id="resultChart"></canvas></div></div>';
+    html += '  <div class="profile-section"><h3>\u{1F4CB} Historial</h3>';
+    html += '  <table class="history-table"><thead><tr><th>A\u00F1o</th><th>Puesto</th><th>Tropela</th></tr></thead><tbody>';
     for (var i = 0; i < stats.historial.length; i++) {
         var h = stats.historial[i];
         var medal = '-';
         var rowClass = '';
-        if (h.pos === 1) { medal = '\u{1F947} Oro'; rowClass = 'medal-1'; }
-        else if (h.pos === 2) { medal = '\u{1F948} Plata'; rowClass = 'medal-2'; }
-        else if (h.pos === 3) { medal = '\u{1F949} Bronce'; rowClass = 'medal-3'; }
-        html += '<tr class="' + rowClass + '"><td>' + h.year + '</td><td>' + h.pos + '\u00BA</td><td>' + medal + '</td></tr>';
+        if (h.pos === 1) { medal = '\u{1F947}'; rowClass = 'medal-1'; }
+        else if (h.pos === 2) { medal = '\u{1F948}'; rowClass = 'medal-2'; }
+        else if (h.pos === 3) { medal = '\u{1F949}'; rowClass = 'medal-3'; }
+        var posDisplay = medal !== '-' ? medal + ' ' + h.pos + '\u00BA' : h.pos + '\u00BA';
+        html += '<tr class="' + rowClass + '"><td>' + h.year + '</td><td>' + posDisplay + '</td><td>' + (h.posTropela || '-') + '</td></tr>';
     }
     html += '</tbody></table></div>';
+    html += '</div>';
+
+    // Competiciones tab (empty placeholder)
+    html += '<div class="tab-pane fade" id="tab-competiciones" role="tabpanel">';
+    html += '  <div class="tab-placeholder">Pr\u00F3ximamente</div>';
+    html += '</div>';
+
+    // Peor mejor tab (empty placeholder)
+    html += '<div class="tab-pane fade" id="tab-peor-mejor" role="tabpanel">';
+    html += '  <div class="tab-placeholder">Pr\u00F3ximamente</div>';
+    html += '</div>';
+
+    html += '</div>';
 
     container.innerHTML = html;
 
@@ -198,6 +237,16 @@ function renderProfile(participante, stats, currentIndex, participantes) {
     container.querySelector('.participant-select').addEventListener('change', function () {
         showParticipant(parseInt(this.value));
     });
+
+    // Chart resize on tab switch (hidden canvas loses dimensions)
+    var generalTab = document.getElementById('tab-general-tab');
+    if (generalTab) {
+        generalTab.addEventListener('shown.bs.tab', function () {
+            if (graficoResultados) {
+                graficoResultados.resize();
+            }
+        });
+    }
 }
 
 function addChart(nombre) {
